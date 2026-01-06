@@ -1,9 +1,7 @@
-# The Three 🚬goteers
-
+# The Silly Squad
 By Alpha N. Q.
 
 Requirements:
-
 - Steamodded (>=1.0.0~)(i dont know the specific version, i havent checked yet)
 - Lovely (>=0.6)
 
