@@ -29,14 +29,6 @@ each joker represents us and our ocs as people through their abilities:
 - **A couple more features down the line :3**
 
 ## FAQ:
-
-*Are you allowed to say that word?*
-I am a trans woman, i have two partners, one of them is also a trans woman and the last one is agender.
-yes, i can say it.
-
-*it's called the "Three" faggoteers but there are four cards. why?*
-Yes, very observant! My partner Sylvie wanted one card for both of her OCs and i couldnt say no, so they are both technically considered two halves of a whole to compensate for the inconcistency, both in functionality and in visuals!
-
 *I want to use some of your code to learn for myself, is that chill?*
 Yeah dude, by all means go ahead! Coding as an entire industry is built on copying and pasting from more experienced people, so it'd be unconstitutional for me to deny you your birthright as an aspiring programmer!
 Hell, you even have full permission to DM me on any of my socials if you're confused about anything i made and how it was done!
