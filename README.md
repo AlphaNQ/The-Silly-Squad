@@ -29,6 +29,10 @@ each joker represents us and our ocs as people through their abilities:
 - **A couple more features down the line :3**
 
 ## FAQ:
+*"Why is the earliest version of this mod V 0.3.1?"*
+I've been hesitating to upload this to git hub since i started development, fearing it's not good enough to be part of any "official" project of mine, but after a while of expanding on it and showing my Computer Science professor, i decided why not!
+Sorry to say all previous versions of this mod before this one are unplayable, but i do still have a changelog of everything because i wanted to be very meticulous about documenting my progress :3
+
 *"I want to use some of your code to learn for myself, is that chill?"*
 Yeah dude, by all means go ahead! Coding as an entire industry is built on copying and pasting from more experienced people, so it'd be unconstitutional for me to deny you your birthright as an aspiring programmer!
 Hell, you even have full permission to DM me on any of my socials if you're confused about anything i made and how it was done!
