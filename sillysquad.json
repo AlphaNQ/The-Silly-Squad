@@ -1,0 +1,17 @@
+{
+	"id": "silly_squad",
+	"name": "The Silly Squad",
+	"author": ["Alpha N. Q."], 
+	"description": "i shitted in my pants :3",
+	"prefix": "tss", 
+	"main_file": "main.lua",
+	"priority" : 2,
+	"badge_colour": "FF7300",
+	"badge_text_colour": "FFFFFF",
+	"display_name": "Silly Squad", 
+	"version": "0.3.1", 
+	"dependencies": [
+		"Steamodded (>=1.*)",
+		"Lovely (>=0.6)"
+	]
+}

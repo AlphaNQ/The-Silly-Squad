@@ -1,0 +1,78 @@
+V 0.1.0 /// Kit Expansion
+
+- Adds the Heavenly Kitsune Joker card.
+  - 1 in 8 chance to turn scored cards into Aces.
+  - 1 in 15 chance to give scored Aces the Kit's favor.
+
+- Adds the Kit's Favour Seal.
+  - Retriggers Played Card 5 times.
+
+both additions are cosmetic at the moment and have no calculate functions. 
+
+V 0.1.1
+
+- Made the Heavenly Kitsune Joker reference "Kit's Favour" instead of "Burned" because im a fucking idiot.
+
+- fixed Kit's Favour text for variable number to be highlighted with {C:attention} instead of {C:green}
+  in order to keep consistency with the original game.
+
+- Reformatted Burned Seal text simply for aestetics :3
+
+V 0.1.2
+
+- Added calculate funciton for Kit's Favour Seal.
+
+V 0.1.3
+
+- Added calculate function for Heavenly Kitsune Joker card.
+
+- Fixed a bug where Flame Noble's "Burned!" Text would pop up despite no cards being affected.
+
+- Tweaked the Flame Noble Joker card to not reaply the Burned seal on cards that already have it.
+
+V 0.1.3a
+
+- Added Credits tab.
+
+- Added French Translation.
+
+- Finished half of Heavenly Kitsune's calculate funciton. other half currently under production.
+
+V 0.1.3b
+
+- Finished the other half of Heavenly Kitsune's calculate function. Still many minor bugs to patch though.
+
+V 0.2.0 /// Jackalope Expansion
+
+- Added Arcane-nine Joker card (currently cosmetic, no calculate function)
+  - Scored aces give X2 Mult
+  - Gains X0.5 Mult for every 10 Aces
+
+V 0.2.1
+
+- Added calculate funciton to Arcane-nine
+
+- Added Arcane-nine's French localization
+
+PLANS:
+
+  - Changing Kit's Favour from Seal to Sticker to allow for both Burned Seal and Kit's Favour to appear on the same card.
+    only thing currently stopping me is how much of a pain debugging will be without the ability to manualy add the seal.
+
+V 0.2.2
+
+- Adjusted card exclusion on Flame Noble and Heavenly Kitsune to include eachother's seals.
+
+- attempting to fix a bug with Arcane-nine that doesnt reset the count, causing it to repeatedly upgrade after a single set of ten Aces.
+  currently no luck.
+
+V 0.3.0 /// Funny Expansion :3
+
+- Added Quick Fox Joker card
+  - spawns a "random" Tarot card when least scored hand is played 🙂
+
+- Added a Caption variable for extra flare in card descriptions :3
+
+V 0.3.1
+
+- Added Quick Fox's French localization
