@@ -29,16 +29,16 @@ each joker represents us and our ocs as people through their abilities:
 - **A couple more features down the line :3**
 
 ## FAQ:
-*I want to use some of your code to learn for myself, is that chill?*
+*"I want to use some of your code to learn for myself, is that chill?"*
 Yeah dude, by all means go ahead! Coding as an entire industry is built on copying and pasting from more experienced people, so it'd be unconstitutional for me to deny you your birthright as an aspiring programmer!
 Hell, you even have full permission to DM me on any of my socials if you're confused about anything i made and how it was done!
 please, do literally any of this!
 ### Just dont. use. ChatGPT.
 
-*How much have you thought of balancing this mod?*
+*"How much have you thought of balancing this mod?"*
 Not at all! :D
 This is a dumb mod made by a dumb fuck and her dumb fucks for dumb reasons. This entire mod is made for fun and composed almost entirely of my partners saying "wouldn't it be funny if ___" and i decided to **WRITE** THAT SHIT! AND IM GONNA **USE THIS AS MY N.E.A FOR SCHOOL!**
 if you care about a balanced experience and dont like fun, leave now >:C
 
-*I found a bug, what do I do?*
+*"I found a bug, what do I do?"*
 ah good, thank you so much! dont hesitate to DM me on any of my listed socials and tell me about it! dont be scared, i dont bite :3
