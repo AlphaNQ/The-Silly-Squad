@@ -73,6 +73,17 @@ V 0.3.0 /// Funny Expansion :3
 
 - Added a Caption variable for extra flare in card descriptions :3
 
-V 0.3.1
+V 0.3.1 /// FIRST OFFICIAL RELEASE
 
-- Added Quick Fox's French localization
+- Setup mod's official Github page.
+
+- Added Quick Fox's French localization.
+
+V 0.3.2
+
+- Fixed mod atlases to be more organised, leading to better preformance (not like it'll be noticable anyway).
+
+- Added disclaimers to joker cards because the visuals are, very obviously, not done yet.
+
+- Added Quick Fox's calculate function.
+  to be clear, none of it works yet, and i dont know how to fix it at the moment. but it is there :3

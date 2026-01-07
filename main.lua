@@ -156,24 +156,17 @@ caption = '{C:quote,s:0.7,E:1}'
 -- =====================ATLASES=====================
 
 SMODS.Atlas {
-    key = "arcane",
-    path = "arcane_twin.png",
+    key = "joker",
+    path = "jokers.png",
     px = 71,
     py = 95
 }
 
 SMODS.Atlas {
-    key = "flame",
-    path = "flame_noble.png",
+    key = "effect",
+    path = "effects.png",
     px = 71,
     py = 95,
-}
-
-SMODS.Atlas {
-    key = "foxxo",
-    path = "friendly_foxxo.png",
-    px = 71,
-    py = 95
 }
 
 -- ======================BADGES=====================
@@ -186,13 +179,13 @@ tss_badges = {
 -- ======================JOKERS=====================
 
 SMODS.Joker {
-    atlas = "flame",
+    atlas = "joker",
 	key = "flame",
-	pos = { x = 0, y = 0 },
+	pos = { x = 1, y = 0 }, soul_pos = { x = 0, y = 0 },
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.QuakeInc() end,
     discovered = true,
     rarity = 3,
-    cost = 7,
+    cost = 6,
     config = {
         extra = {
             burn_num = 1,
@@ -214,7 +207,7 @@ SMODS.Joker {
 	            end
                 return {
                     message = localize('k_burn'),
-                    colour = G.C.SUITS.Hearts
+                    colour = HEX('660000')
                 }
             end
         end
@@ -222,9 +215,9 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
-    atlas = 'arcane',
+    atlas = 'joker',
     key = 'kitsune',
-	pos = { x = 0, y = 0 },
+	pos = { x = 2, y = 0 }, soul_pos = { x = 0, y = 0 },
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.Gods() end,
     discovered = true,
     rarity = 4,
@@ -248,7 +241,7 @@ SMODS.Joker {
             for _, scored_card in ipairs(context.scoring_hand) do
                 -- Seal Application
                 if scored_card:get_id() == 14 then
-                    if SMODS.pseudorandom_probability(card, 'tss_arcane', card.ability.extra.fave_num, card.ability.extra.fave_denom) then
+                    if SMODS.pseudorandom_probability(card, 'tss_kitsune', card.ability.extra.fave_num, card.ability.extra.fave_denom) then
                         if not card.ability.tss_favour or not card.ability.tss_burned then
                             scored_card:set_seal("tss_favour")              --Applies Kit's Favor
                         end
@@ -273,9 +266,9 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
-    atlas = 'arcane',
+    atlas = 'joker',
     key = 'bnop',
-	pos = { x = 1, y = 0 },
+	pos = { x = 3, y = 0 }, soul_pos = { x = 0, y = 0 },
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.Gods() end,
     discovered = true,
     rarity = 4,
@@ -294,7 +287,7 @@ SMODS.Joker {
                 self.config.extra.xmult_mod,
                 self.config.ace_count,
                 card.ability.extra.xmult,
-                card.ability.ace_count,
+                card.ability.ace_count
             }
         }
     end,
@@ -329,24 +322,71 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
-    atlas = 'foxxo',
+    atlas = 'joker',
     key = 'foxxo',
-	pos = { x = 0, y = 0 },
+	pos = { x = 4, y = 0 }, soul_pos = { x = 0, y = 0 },
     discovered = true,
     rarity = 2,
-    cost = 10,
+    cost = 5,
     config = {
         extra = {
+            tarot_num = 99,
+            tarot_denom = 100
         }
-    }
+    },
+    loc_vars = function(self, info_queue, card)
+        local tarot_num, tarot_denom = SMODS.get_probability_vars(card, card.ability.extra.tarot_num, card.ability.extra.tarot_denom)
+        return { vars = { card.ability.extra.tarot_num, card.ability.extra.tarot_denom } }
+    end,
+    calculate = function(self, card, context)
+        if context.cardarea == G.jokers and context.main_scoring then
+            if SMODS.pseudorandom_probability(card, 'tss_foxxo', card.ability.extra.tarot_num, card.ability.extra.tarot_denom) then
+                G.E_MANAGER:add_event(Event({
+                    func = (function()
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                SMODS.add_card {
+                                    set = 'Tarot',
+                                    key = 'c_fool'
+                                }
+                                G.GAME.consumeable_buffer = 0
+                                return true
+                            end
+                        }))
+                        SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
+                            context.blueprint_card or card)
+                        return true
+                    end)
+                }))
+            else
+                G.E_MANAGER:add_event(Event({
+                    func = (function()
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                SMODS.add_card {
+                                    set = 'Tarot',
+                                    key = 'c_judgement'
+                                }
+                                G.GAME.consumeable_buffer = 0
+                                return true
+                            end
+                        }))
+                        SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
+                            context.blueprint_card or card)
+                        return true
+                    end)
+                }))
+            end
+        end
+    end
 }
 
 -- =======================SEAL======================
 
 SMODS.Seal {
-    atlas = 'flame',
+    atlas = 'effect',
     key = "burned",
-    pos = { x = 1, y = 0 },
+    pos = { x = 0, y = 0 },
     discovered = true,
     badge_colour = HEX("660000"),
     config = {
@@ -395,9 +435,9 @@ SMODS.Seal {
 -- =====================STICKER=====================
 
 SMODS.Seal {
-    atlas = 'arcane',
+    atlas = 'effect',
     key = 'favour',
-	pos = { x = 2, y = 0 },
+	pos = { x = 1, y = 0 },
     badge_colour = HEX('EE00FF'),
     discovered = true,
     config = {
