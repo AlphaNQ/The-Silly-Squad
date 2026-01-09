@@ -11,18 +11,21 @@
 - Add Quick Fox                                             [🔃]
     - spawns a "random" Tarot card when Least scored hand is played
     - 99% chance to spawn the fool, 1% chance to spawn judgement
-- Add Wild Card(Name in Progress)
+- Add Wild Card(T.B.N)
     - Random Chance to act as Flame Noble, Kit's Favour, Arcanine-nine or Quick Fox(25% chance each)
-- Add Voucher(T.B.N)
-    - Increases odds of seeing rare and legendary jokers in the shop
+- Add Vouchers                                              [🔃]
+    - Increases odds of seeing legendary jokers in the shop
 - Convert Kit's Favour into a Sticker
 - Rebalance as necessary
+- Add Blind (T.B.N)
+    - debuffs all Ace Cards
 
 ---- BUG FIXES ----
 
 - Heavenly Kitsune only applies Kit's favour to one card per hand
 - Arcane-nine doesnt reset the count.
 ]]
+
 -- ====================META=DATA====================
 
 SMODS.current_mod.extra_tabs = function()
@@ -169,6 +172,13 @@ SMODS.Atlas {
     py = 95,
 }
 
+SMODS.Atlas {
+    key = "voucher",
+    path = "vouchers.png",
+    px = 71,
+    py = 95,
+}
+
 -- ======================BADGES=====================
 
 tss_badges = {
@@ -186,12 +196,7 @@ SMODS.Joker {
     discovered = true,
     rarity = 3,
     cost = 6,
-    config = {
-        extra = {
-            burn_num = 1,
-            burn_denom = 5
-        }
-    },
+    config = { extra = { burn_num = 1, burn_denom = 5 } },
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_SEALS.tss_burned
         local burn_num, burn_denom = SMODS.get_probability_vars(card, card.ability.extra.burn_num, card.ability.extra.burn_denom)
@@ -222,14 +227,7 @@ SMODS.Joker {
     discovered = true,
     rarity = 4,
     cost = 10,
-    config = {
-        extra = {
-            ace_num = 1,
-            ace_denom = 8,
-            fave_num = 1,
-            fave_denom = 16,
-        }
-    },
+    config = { extra = { ace_num = 1, ace_denom = 8, fave_num = 1, fave_denom = 16 } },
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_SEALS.tss_favour
         local ace_num, ace_denom = SMODS.get_probability_vars(card, card.ability.extra.ace_num, card.ability.extra.ace_denom)
@@ -273,13 +271,7 @@ SMODS.Joker {
     discovered = true,
     rarity = 4,
     cost = 10,
-    config = {
-        extra = {
-            xmult = 2,
-            xmult_mod = 0.5
-        },
-        ace_count = 10
-    },
+    config = { extra = { xmult = 2, xmult_mod = 0.5 }, ace_count = 10 },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -328,54 +320,52 @@ SMODS.Joker {
     discovered = true,
     rarity = 2,
     cost = 5,
-    config = {
-        extra = {
-            tarot_num = 99,
-            tarot_denom = 100
-        }
-    },
+    config = { extra = { num = 1, denom = 1 } },
     loc_vars = function(self, info_queue, card)
-        local tarot_num, tarot_denom = SMODS.get_probability_vars(card, card.ability.extra.tarot_num, card.ability.extra.tarot_denom)
+        local tarot_num, tarot_denom = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.denom)
         return { vars = { card.ability.extra.tarot_num, card.ability.extra.tarot_denom } }
     end,
     calculate = function(self, card, context)
-        if context.cardarea == G.jokers and context.main_scoring then
-            if SMODS.pseudorandom_probability(card, 'tss_foxxo', card.ability.extra.tarot_num, card.ability.extra.tarot_denom) then
-                G.E_MANAGER:add_event(Event({
-                    func = (function()
+        if context.cardarea == G.play and context.main_scoring and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+            local _handname, _played = 'High Card', math.huge
+            for hand_key, hand in pairs(G.GAME.hands) do
+                if hand.played < _played then
+                    _played = hand.played,
+                    _handname == hand_key
+                    if SMODS.pseudorandom_probability(card, 'tss_foxxo', card.ability.extra.tarot_num, card.ability.extra.tarot_denom) then
                         G.E_MANAGER:add_event(Event({
-                            func = function()
-                                SMODS.add_card {
-                                    set = 'Tarot',
-                                    key = 'c_fool'
-                                }
-                                G.GAME.consumeable_buffer = 0
+                            func = (function()
+                                G.E_MANAGER:add_event(Event({
+                                    func = function()
+                                        SMODS.add_card { set = 'Tarot' }
+                                        G.GAME.consumeable_buffer = 0
+                                        return true
+                                    end
+                                }))
+                                SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
+                                    context.blueprint_card or card)
                                 return true
-                            end
+                            end)
                         }))
-                        SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
-                            context.blueprint_card or card)
-                        return true
-                    end)
-                }))
-            else
-                G.E_MANAGER:add_event(Event({
-                    func = (function()
+                    else
                         G.E_MANAGER:add_event(Event({
-                            func = function()
-                                SMODS.add_card {
-                                    set = 'Tarot',
-                                    key = 'c_judgement'
-                                }
-                                G.GAME.consumeable_buffer = 0
+                            func = (function()
+                                G.E_MANAGER:add_event(Event({
+                                    func = function()
+                                        SMODS.add_card { set = 'Tarot' }
+                                        G.GAME.consumeable_buffer = 0
+                                        return true
+                                    end
+                                }))
+                                SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
+                                    context.blueprint_card or card)
                                 return true
-                            end
+                            end)
                         }))
-                        SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
-                            context.blueprint_card or card)
-                        return true
-                    end)
-                }))
+                    end
+                end
+            local least_played = _handname
             end
         end
     end
@@ -390,21 +380,9 @@ SMODS.Seal {
     discovered = true,
     badge_colour = HEX("660000"),
     config = {
-        extra = {
-            uses = 5
-        },
-        chips = -10,
-        xmult = 4,
-    },
+        extra = { uses = 5 }, chips = -10, xmult = 4 },
     loc_vars = function(self, info_queue, card)
-        return {
-            vars = {
-                self.config.chips,
-                self.config.xmult,
-                self.config.extra.uses,
-                card.ability.seal.extra.uses
-            }
-        }
+        return { vars = { self.config.chips, self.config.xmult, self.config.extra.uses, card.ability.seal.extra.uses } }
     end,
     calculate = function(self, card, context)
         -- Seal Effects
@@ -440,11 +418,7 @@ SMODS.Seal {
 	pos = { x = 1, y = 0 },
     badge_colour = HEX('EE00FF'),
     discovered = true,
-    config = {
-        extra = {
-            counts = 5 
-        } 
-    },
+    config = { extra = { counts = 5 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { self.config.extra.counts } }
     end,
@@ -454,5 +428,46 @@ SMODS.Seal {
                 repetitions = card.ability.seal.extra.counts
             }
         end
+    end
+}
+
+-- =====================VOUCHERS====================
+
+SMODS.Voucher{
+    atlas = 'voucher',
+    key = "cosmic",
+    pos = { x = 0, y = 0 },
+    discovered = true,
+    cost = 10,
+    redeem = function(self, card)
+        -- 1 in 20 chance for shop Jokers to be Legendary
+        local gcp_hook = get_current_pool
+        function get_current_pool(_type, _rarity, _legendary, _append)
+            if #SMODS.find_card("v_tss_cosmic")>0 and _type == 'Joker' and _append == 'sho' and pseudorandom('ellerar'..G.GAME.round_resets.ante.._append, 1, 20)==1 then
+                _legendary = true 
+            end
+            return gcp_hook(_type, _rarity, _legendary, _append)
+        end
+    end
+}
+
+SMODS.Voucher{
+    atlas = 'voucher',
+    key = "void",
+    pos = { x = 1, y = 0 },
+    discovered = true,
+    cost = 50,
+    requires = { "v_tss_cosmic" },
+    config = { mod_mult = 10 },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { self.config.mod_mult } }
+    end,
+    redeem = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                G.GAME.legendary_mod = G.GAME.legendary_mod * card.ability.mod_mult
+                return true
+            end
+        }))
     end
 }
