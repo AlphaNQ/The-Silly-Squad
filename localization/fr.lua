@@ -32,9 +32,26 @@ return {
                 text = {
                     "Crée une carte {C:tarot}Tarot{} {E:1}random{}",
                     "quand {C:attention}la main la moins aquise{} est jouée",
-                    caption.."Le plus sournois du royaume des animaux ;3c",
+                    "{C:inactive}(Selon la place disponible){}",
+                    caption.."Le plus sournois du royaume des animaux ;3c"
                 }
             }
+        },
+        Voucher={
+            v_tss_cosmic = {
+                name = "Cosmique",
+                text = {
+                    "{C:legendary,E:1}Legendary{} Jokers can",
+                    "appear in the shop",
+                }
+            },
+            v_tss_void = {
+                name = "Vide",
+                text = {
+                    "{C:legendary,E:1}legendary{} Jokers appear",
+                    "{X:mult,C:white}#1#X{} more often",
+                }
+            },
         },
         Other = {
             tss_burned_seal = {

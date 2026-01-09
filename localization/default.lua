@@ -31,9 +31,26 @@ return {
                 text = {
                     "Creates a {E:1}random{} {C:tarot}Tarot{} card",
                     "when {C:attention}least scored hand{} is played",
-                    caption.."The sneakiest in the animal kingdom ;3c",
+                    "{C:inactive}(Must have room){}",
+                    caption.."The sneakiest in the animal kingdom ;3c"
                 }
             }
+        },
+        Voucher={
+            v_tss_cosmic = {
+                name = "Cosmic",
+                text = {
+                    "{C:legendary,E:1}Legendary{} Jokers can",
+                    "appear in the shop",
+                }
+            },
+            v_tss_void = {
+                name = "Void",
+                text = {
+                    "{C:legendary,E:1}Legendary{} Jokers appear",
+                    "{X:mult,C:white}#1#X{} more often",
+                }
+            },
         },
         Other = {
             tss_burned_seal = {
