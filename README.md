@@ -10,27 +10,35 @@ The Three Faggoteers is a very dumb Balatro mod that i made of me and my partner
 ## Current Content
 - **4 New Jokers**: *And more to come!*
 each joker represents us and our ocs as people through their abilities:
-  - Flame Noble
+  - Flame Noble         [Rare]
     - 1 in 5 chance to apply the Burned Seal to scored cards
-  - Heavenly Kitsune
+  - Heavenly Kitsune    [Legendary]
     - 1 in 8 chance to turn scored cards into Aces
     - 1 in 16 chance to give scored Aces the Kit's Favour
-  - Arcane-nine
+  - Arcane-nine         [Legendary]
     - Scored aces give X2 Mult
     - Gains X0.5 Mult for every 10 Aces
-  - Quick Fox
+  - Quick Fox           [Uncommon]
     - spawns a *random* Tarot card when Least scored hand is played
+
 - **2 New Seals**: Of course we cant just have jokers that dont do *something* funky to other cards, so we have two seals that get applied using two of the four jokers. (please note one of them will be turned into a sticker later down the line)
   - Burned Seal
     - -10 Mult, x4 Mult
     - cards with this seal will be Burnt away(destroyed) after scoring 5 times
   - Kit's Favour
     - Cards retrigger 5 times
+
+- **2 New Vouchers**: with such silly cards, it'd be a missed opportunity if you couldnt get them naturally, so let's balance that a bit :3
+  - Cosmic
+    - Legendary Jokers can appear in shops
+  - Void
+    - Legendary Jokers spawn 10x more frequently
+
 - **A couple more features down the line :3**
 
 ## FAQ:
 *"Why is the earliest version of this mod V 0.3.1?"*
-I've been hesitating to upload this to git hub since i started development, fearing it's not good enough to be part of any "official" project of mine, but after a while of expanding on it and showing my Computer Science professor, i decided why not!
+I've been hesitating to upload this to git hub since i started development, fearing it's not good enough to be part of any "official" project of mine, but after a while of expanding on it, i decided why not!
 Sorry to say all previous versions of this mod before this one are unplayable, but i do still have a changelog of everything because i wanted to be very meticulous about documenting my progress :3
 
 *"I want to use some of your code to learn for myself, is that chill?"*
@@ -41,7 +49,7 @@ please, do literally any of this!
 
 *"How much have you thought of balancing this mod?"*
 Not at all! :D
-This is a dumb mod made by a dumb fuck and her dumb fucks for dumb reasons. This entire mod is made for fun and composed almost entirely of my partners saying "wouldn't it be funny if ___" and i decided to **WRITE** THAT SHIT! AND IM GONNA **USE THIS AS MY N.E.A FOR SCHOOL!**
+This is a dumb mod made by a dumb fuck and her dumb fucks for dumb reasons. This entire mod is made for fun and composed almost entirely of my partners saying "wouldn't it be funny if ___" and i decided to **WRITE** THAT SHIT!
 if you care about a balanced experience and dont like fun, leave now >:C
 
 *"I found a bug, what do I do?"*

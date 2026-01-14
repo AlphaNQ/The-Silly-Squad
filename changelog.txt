@@ -87,3 +87,15 @@ V 0.3.2
 
 - Added Quick Fox's calculate function.
   to be clear, none of it works yet, and i dont know how to fix it at the moment. but it is there :3
+
+V 0.3.2a /// Mild Break
+
+- Still attempting to fix Quick Fox with little results, please remain patient. In the meantime, this branch is seperated while i focus
+on other parts of the mod.
+
+- Noticed that V 0.3.2 is still marked in the .json file as V 0.3.1. Sadly not something i can fix but this does not cause any
+  major problems, just thought it was worth noting that.
+
+- Adding two new Shop Vouchers
+  - Cosmic: Legendary Jokers can appear in the Shop
+  - Void: Legendary Jokers spawn 10x more frequently
