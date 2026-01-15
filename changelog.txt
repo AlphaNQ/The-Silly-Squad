@@ -99,3 +99,10 @@ on other parts of the mod.
 - Adding two new Shop Vouchers
   - Cosmic: Legendary Jokers can appear in the Shop
   - Void: Legendary Jokers spawn 10x more frequently
+
+V 0.3.2b
+
+- Added a custom icon. Why? Why not, im tired. i'll change the art eventually, i just wanted to figure out how to do it first.
+
+- Quick fox now... works at the least. it doesnt crash the game, but it still doesnt do exactly what it's supposed to yet.
+  In the meantime, i'll be prioritising other projects to avoid losing flow.

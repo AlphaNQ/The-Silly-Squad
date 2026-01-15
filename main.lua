@@ -8,7 +8,7 @@
 - Add Arcane-nine                                           [✅🪲]
     - Scored aces give X2 Mult
     - Gains X0.5 Mult for every 10 Aces
-- Add Quick Fox                                             [🔃]
+- Add Quick Fox                                             [✅🪲]
     - spawns a "random" Tarot card when Least scored hand is played
     - 99% chance to spawn the fool, 1% chance to spawn judgement
 - Add Wild Card(T.B.N)
@@ -24,6 +24,7 @@
 
 - Heavenly Kitsune only applies Kit's favour to one card per hand
 - Arcane-nine doesnt reset the count.
+- Quick fox activates for every played hand
 ]]
 
 -- ====================META=DATA====================
@@ -157,6 +158,13 @@ G.ARGS.LOC_COLOURS['burn'] = HEX('660000')
 caption = '{C:quote,s:0.7,E:1}'
 
 -- =====================ATLASES=====================
+
+SMODS.Atlas {
+    key = "modicon",
+    path = "modicon.png",
+    px = 32,
+    py = 32
+}
 
 SMODS.Atlas {
     key = "joker",
@@ -313,38 +321,30 @@ SMODS.Joker {
     end
 }
 
-SMODS.Joker {
+--[[SMODS.Joker {
     atlas = 'joker',
     key = 'foxxo',
 	pos = { x = 4, y = 0 }, soul_pos = { x = 0, y = 0 },
     discovered = true,
     rarity = 2,
     cost = 5,
-    config = { extra = { num = 1, denom = 1 } },
-    loc_vars = function(self, info_queue, card)
-        local tarot_num, tarot_denom = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.denom)
-        return { vars = { card.ability.extra.tarot_num, card.ability.extra.tarot_denom } }
-    end,
+    config = { extra = { tarot_num = 1, tarot_denom = 2 } },
     calculate = function(self, card, context)
-        if context.cardarea == G.play and context.main_scoring and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
-            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
-            local _handname, _played = 'High Card', math.huge
+        if context.joker_main and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+            local _handname, _played = 'High Card', -1
             for hand_key, hand in pairs(G.GAME.hands) do
-                if hand.played < _played then
-                    _played = hand.played,
-                    _handname == hand_key
+                if hand.played > _played then
                     if SMODS.pseudorandom_probability(card, 'tss_foxxo', card.ability.extra.tarot_num, card.ability.extra.tarot_denom) then
                         G.E_MANAGER:add_event(Event({
                             func = (function()
                                 G.E_MANAGER:add_event(Event({
                                     func = function()
-                                        SMODS.add_card { set = 'Tarot' }
+                                        SMODS.add_card { set = 'Tarot', key = 'c_fool'}
                                         G.GAME.consumeable_buffer = 0
                                         return true
                                     end
                                 }))
-                                SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
-                                    context.blueprint_card or card)
+                                SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE }, context.blueprint_card or card)
                                 return true
                             end)
                         }))
@@ -353,20 +353,62 @@ SMODS.Joker {
                             func = (function()
                                 G.E_MANAGER:add_event(Event({
                                     func = function()
-                                        SMODS.add_card { set = 'Tarot' }
+                                        SMODS.add_card { set = 'Tarot', key = 'c_judgement' }
                                         G.GAME.consumeable_buffer = 0
                                         return true
                                     end
                                 }))
-                                SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE },
-                                    context.blueprint_card or card)
+                                SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE }, context.blueprint_card or card)
                                 return true
                             end)
                         }))
                     end
+                    _played = hand.played
+                    _handname = hand_key
+                else
+                    break
                 end
-            local least_played = _handname
             end
+            local most_played = _handname
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+        end
+    end
+}]]
+
+SMODS.Joker {
+    atlas = 'joker',
+    key = 'foxxo',
+	pos = { x = 4, y = 0 }, soul_pos = { x = 0, y = 0 },
+    discovered = true,
+    rarity = 2,
+    cost = 5,
+    --config = { extra = { tarot_num = 1, tarot_denom = 2 } },
+    calculate = function(self, card, context)
+        if context.joker_main and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+            local _handname, _played = 'High Card', -1
+            for hand_key, hand in pairs(G.GAME.hands) do
+                if hand.played > _played then
+                    _played = hand.played
+                    _handname = hand_key
+                    G.E_MANAGER:add_event(Event({
+                        func = (function()
+                            G.E_MANAGER:add_event(Event({
+                                func = function()
+                                    SMODS.add_card { set = 'Tarot', key = 'c_fool'}
+                                    G.GAME.consumeable_buffer = 0
+                                    return true
+                                end
+                            }))
+                            SMODS.calculate_effect({ message = localize('k_plus_tarot'), colour = G.C.PURPLE }, context.blueprint_card or card)
+                            return true
+                        end)
+                    }))
+                else
+                    break --this line is only here because the code spawns multiple cards if it's gone.
+                end
+            end
+            local most_played = _handname
         end
     end
 }
