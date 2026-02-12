@@ -87,6 +87,9 @@ return {
                     "across the screen,",
                     "giving various buffs.",
                     "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
                 }
             },
             j_tss_mykra = {
