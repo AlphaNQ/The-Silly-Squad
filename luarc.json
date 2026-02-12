@@ -1,0 +1,21 @@
+{
+    "workspace.library": [
+        "C:/Users/alpha/AppData/Roaming/Balatro/Mods/smods-1.0.0-beta-1224a",
+        "C:/Users/alpha/AppData/Roaming/Balatro/Mods/lovely/dump"
+    ],
+    "diagnostics.disable": [
+        "duplicate-set-field",
+        "undefined-field",
+        "lowercase-global",
+        "missing-parameter",
+        "inject-field",
+        "need-check-nil",
+        "missing-fields",
+        "cast-local-type",
+        "param-type-mismatch",
+        "undefined-global"
+    ],
+    "formatting.on_save": true,
+    "format.enable": true,
+    "runtime.version": "LuaJIT"
+}

@@ -1,11 +1,73 @@
 return {
     descriptions = {
+        Blind = {
+            bl_tss_student = {
+                name = 'The "F" Student',
+                text = {
+                    "All Ace cards",
+                    "are debuffed"
+                }
+            }
+        },
         Joker = {
+            j_tss_bnop = {
+                name = "Arcane-nine",
+                text = {
+                    "Scored Aces give {X:mult,C:white}X#1#{} Mult",
+                    "Gains {X:mult,C:white}X#2#{} Mult for every {C:attention}#3#{} Aces",
+                    "{C:inactive}(Currently {X:mult,C:white}X#4#{C:inactive} Mult)",
+                    "{C:inactive}(#5# Aces Remaining){}"
+                }
+            },
+            j_tss_bubble = {
+                name = "Bubblegum",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult per {C:attention}Follower",
+					"on {C:burn}Alpha{}'s {C:blue}BlueSky{} account",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+					caption.."*blows you up with my mind*",
+                },
+                unlock = {
+					"{E:1,s:1.3}?????"
+				}
+            },
             j_tss_flame = {
                 name = "Flame Noble",
                 text = {
                     '{C:green}#1# in #2#{} chance to', 
                     '{C:burn,E:1}burn{} cards when scored' --1 in 5
+                }
+            },
+            j_tss_foxxo = {
+                name = "Quick Fox",
+                text = {
+                    'Creates a {E:1}"random"{} {C:tarot}Tarot{} card',
+                    "when {C:attention}least scored hand{} is played",
+                    "{C:inactive}(Must have room){}",
+                    caption.."The sneakiest in the animal kingdom ;3c"
+                }
+            },
+            j_tss_giggles = {
+                name = "Giggles",
+                text = {
+                    "At the start of the round, eats",
+                    "any food based joker to its", 
+                    "right and adds double the sell",
+                    "value to mult"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
+                }
+            },
+            j_tss_helix = {
+                name = "Helix",
+                text = {
+                    "Eats a random joker to either",
+                    "side of itself and gains 0.1",
+                    "mult per joker eaten"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
                 }
             },
             j_tss_kitsune = {
@@ -17,42 +79,61 @@ return {
                     "scored Aces the {C:purple,E:1}Kit's Favor{}" --1 in 8, 1 in 16
                 }
             },
-            j_tss_bnop = {
-                name = "Arcane-nine",
+            j_tss_mtceleste = {
+                name = "Mt. Celeste",
                 text = {
-                    "Scored Aces give {X:mult,C:white}X#1#{} Mult",
-                    "Gains {X:mult,C:white}X#2#{} Mult for every {C:attention}#3#{} Aces",
-                    "{C:inactive}(Currently {X:mult,C:white}X#4#{C:inactive} Mult)",
-                    "{C:inactive}(#5# Aces Remaining){}"
+                    "While this joker is active,",
+                    "spawns {C:red}strawberries{}",
+                    "across the screen,",
+                    "giving various buffs.",
+                    "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
                 }
             },
-            j_tss_foxxo = {
-                name = "Quick Fox",
+            j_tss_mykra = {
+                name = "MYKRA",
                 text = {
-                    "Creates a {E:1}random{} {C:tarot}Tarot{} card",
-                    "when {C:attention}least scored hand{} is played",
-                    "{C:inactive}(Must have room){}",
-                    caption.."The sneakiest in the animal kingdom ;3c"
+                    "Jokers with similar keywords",
+                    "to those you own are more likely",
+                    "to appear in the shop"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
+                }
+            },
+            j_tss_roulette = {
+                name = "Roulette",
+                text = {
+                    "Random chance to act",
+                    "as {C:red}Flame Noble{}, {C:planet}Heavenly Kitsune{},",
+                    "{C:purple}Arcane-nine{}, or {C:attention}Quick Fox{}",
+                    "at {C:attention}end of round.{}",
+                    "{C:inactive}(Currently: {C:blue}#1#{C:inactive})"
                 }
             }
         },
-        Voucher={
-            v_tss_cosmic = {
-                name = "Cosmic",
-                text = {
-                    "{C:legendary,E:1}Legendary{} Jokers can",
-                    "appear in the shop",
-                }
-            },
-            v_tss_void = {
-                name = "Void",
-                text = {
-                    "{C:legendary,E:1}Legendary{} Jokers appear",
-                    "{X:mult,C:white}#1#X{} more often",
-                }
-            },
-        },
         Other = {
+            tss_berry_n = {
+                name = "Strawberry",
+                text = {
+                    "Mt. Celeste gains",
+                    "{X:mult,C:white}X0.5{} Mult"
+                }
+            },
+            tss_berry_w = {
+                name = {"Winged",
+                    "Strawberry"
+                },
+                text = {
+                    "{C:attention}+1{} hand",
+                }
+            },
+            tss_berry_g = {
+                name = "Golden Strawberry",
+                text = {
+                    "Adds {C:dark_edition}Negative{} to",
+                    "a random joker"
+                }
+            },
             tss_burned_seal = {
                 name = 'Burned',
                 text = {
@@ -75,13 +156,31 @@ return {
                     'card {C:attention}#1#{} times{}' -- 5 times
                 }
             }
+        },
+        Voucher = {
+            v_tss_cosmic = {
+                name = "Cosmic",
+                text = {
+                    "{C:legendary,E:1}Legendary{} Jokers appear",
+                    "{X:mult,C:white}#1#X{} more often",
+                }
+            },
+            v_tss_void = {
+                name = "Void",
+                text = {
+                    "{C:legendary,E:1}Legendary{} Jokers appear",
+                    "{X:mult,C:white}#1#X{} more often",
+                },
+                unlock = {
+                    "Unlock 1 {C:legendary,E:1}Legendary{} Joker"
+                }
+            }
         }
     },
     misc = {
         labels = {
             tss_burned_seal = "Burned Seal",
-            tss_favour_seal = "Favor Seal",
-            tss_favour = "Favour"
+            tss_favour_seal = "Favor Seal"
         },
         dictionary = {
             k_burn = "Burned!",

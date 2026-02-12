@@ -57,14 +57,14 @@ V 0.2.1
 PLANS:
 
   - Changing Kit's Favour from Seal to Sticker to allow for both Burned Seal and Kit's Favour to appear on the same card.
-    only thing currently stopping me is how much of a pain debugging will be without the ability to manualy add the seal.
+    only thing currently stopping me is how much of a pain debugging will be without the ability to manualy add the sticker.
 
 V 0.2.2
 
 - Adjusted card exclusion on Flame Noble and Heavenly Kitsune to include eachother's seals.
 
-- attempting to fix a bug with Arcane-nine that doesnt reset the count, causing it to repeatedly upgrade after a single set of ten Aces.
-  currently no luck.
+- attempting to fix a bug with Arcane-nine that doesnt reset the count, causing it to repeatedly upgrade after a single set of 
+  ten Aces. Currently no luck.
 
 V 0.3.0 /// Funny Expansion :3
 
@@ -90,8 +90,8 @@ V 0.3.2
 
 V 0.3.2a /// Mild Break
 
-- Still attempting to fix Quick Fox with little results, please remain patient. In the meantime, this branch is seperated while i focus
-on other parts of the mod.
+- Still attempting to fix Quick Fox with little results, please remain patient. In the meantime, this branch is seperated while i 
+focus on other parts of the mod.
 
 - Noticed that V 0.3.2 is still marked in the .json file as V 0.3.1. Sadly not something i can fix but this does not cause any
   major problems, just thought it was worth noting that.
@@ -104,5 +104,28 @@ V 0.3.2b
 
 - Added a custom icon. Why? Why not, im tired. i'll change the art eventually, i just wanted to figure out how to do it first.
 
-- Quick fox now... works at the least. it doesnt crash the game, but it still doesnt do exactly what it's supposed to yet.
+- Quick Fox now... works at the least. it doesnt crash the game, but it still doesnt do exactly what it's supposed to yet.
   In the meantime, i'll be prioritising other projects to avoid losing flow.
+
+V 0.4.0 /// Overall Overhaul
+
+This is where updates will start to get alot more disorganised. the original plan of this mod has been completed and we now
+move on to bugfixes along with the more complimentary additions and changes.
+
+- Added Bubblegum Joker card
+  - X0.25 mult for every follower on Alpha's BlueSky Account.
+  This is a blatant copy of the Elle card from "ellejokers.". that is the entire joke about this card, and she knows of this
+  before I even published this update.
+
+- Added Roulette Joker card
+  - Random chance to act as either Flame Noble, Heavenly Kitsune, Arcane-nine or Quick Fox
+
+- Added The F Student Boss Blind
+  - All Ace cards are debuffed
+  NOTE: with the way this blind is coded, any custom ranks that give the same amount of chips as Aces will also get debuffed.
+
+- Other cards on the way, but currently locked to make sure you dont get them on your runs
+  NOTE: do not bother "hacking" them in, they literally do nothing.
+
+- Restructured mod's file system cause i fear this might get big real fast. You can only add so many dividers as comments
+before they stop being effective.
