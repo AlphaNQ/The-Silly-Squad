@@ -13,17 +13,17 @@ SMODS.Joker {
             vars = {
                 self.config.extra.xmult, 
                 self.config.extra.xmult_mod,
-                self.config.ace_count,
+                self.config.extra.ace_count,
                 card.ability.extra.xmult,
-                card.ability.ace_count
+                card.ability.extra.ace_count
             }
         }
     end,
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 14 then
-            if card.ability.ace_count > 0 then
-                card.ability.ace_count = card.ability.ace_count - 1
+            if card.ability.extra.ace_count > 0 then
+                card.ability.extra.ace_count = card.ability.extra.ace_count - 1
             end
             return {
                 xmult = card.ability.extra.xmult
@@ -32,14 +32,14 @@ SMODS.Joker {
         if context.joker_main then
             for _, scored_card in ipairs(context.scoring_hand) do
                 if scored_card:get_id() == 14 then
-                    if card.ability.ace_count > 0 then
+                    if card.ability.extra.ace_count > 0 then
                         return {
-                            message = card.ability.ace_count .. " remaining"
+                            message = card.ability.extra.ace_count .. " remaining"
                         }
                     end
-                    if card.ability.ace_count == 0 then
-                        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod,
-                        card.ability.ace_count == 10
+                    if card.ability.extra.ace_count == 0 then
+                        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
+                        card.ability.extra.ace_count = 10
                         return {
                             message = localize('k_upgrade_ex'),
                         }

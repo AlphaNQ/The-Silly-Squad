@@ -37,124 +37,43 @@
 - Suspicious that Flame Noble might be applying burn seal by the hand and not by the card.
 - Heavenly Kitsune only applies Kit's favour to one card per hand
 - Arcane-nine doesnt reset the count.
-- Quick fox activates for every played hand
+- Quick fox activates for every played hand, and activates twice when full house is played.
 ]]
 
 -- ====================META=DATA====================
 
+-- Credits Tab --
+
 SMODS.current_mod.extra_tabs = function()
-	local scale = 0.75
 	return {
 		label = localize("tss_credits_label"),
 		tab_definition_function = function()
 			return {
-				n = G.UIT.ROOT,
-				config = {
-    				align = "cm",
-	    			padding = 0,
-		    		colour = G.C.CLEAR,
-				},
-				nodes = { {
-					n = G.UIT.R,
-					config = {
-						padding = 0,
-						align = "cl"
-					},
-					nodes = { {
-						n = G.UIT.T,
-						config = {
-							text = localize("tss_credits_developer"),
-							shadow = true,
-							scale = scale * 0.8,
-							colour = G.C.UI.TEXT_LIGHT
-						}
-					}, {
-						n = G.UIT.T,
-						config = {
-							text = "Alpha N. Q.",
-							shadow = true,
-							scale = scale * 0.8,
-							colour = G.C.BLUE
-						}
-					} }
-				}, {
-					n = G.UIT.R,
-					config = {
-						padding = 0,
-						align = "cl",
-						scale = scale * 0.6,
-					},
-					nodes = { {
-						n = G.UIT.T,
-						config = {
-							text = localize("tss_credits_programminghelp"),
-							shadow = true,
-							scale = scale * 0.5,
-							colour = G.C.UI.TEXT_LIGHT
-						}
-					}, {
-						n = G.UIT.T,
-						config = {
-							text = "slimestuff.",
-							shadow = true,
-							scale = scale * 0.5,
-							colour = G.C.BLUE
-						}
-					} }
-				}, {
-					n = G.UIT.R,
-					config = {
-						padding = 0,
-						align = "cl",
-						scale = scale * 0.6,
-					},
-					nodes = { {
-						n = G.UIT.T,
-						config = {
-							text = localize("tss_credits_specialthanks"),
-							shadow = true,
-							scale = scale * 0.5,
-							colour = G.C.UI.TEXT_LIGHT
-						}
-					}, {
-						n = G.UIT.T,
-						config = {
-							text = "Slyvie, xCred_64",
-							shadow = true,
-							scale = scale * 0.5,
-							colour = G.C.BLUE
-						}
-					} }
-				}, {
-					n = G.UIT.R,
-					config = {
-						padding = 0.2,
-						align = "cm",
-					},
-					nodes = {
-						UIBox_button{
-							minw = 3.85,
-                            colour = HEX("009DFF"),
-							button = "alpha_bsky",
-							label = {"BlueSky"}
-						},
-						UIBox_button{
-							minw = 3.85,
-							button = "alpha_youtube",
-							label = {"YouTube"}
-						},
-						UIBox_button{
-							minw = 3.85,
-							colour = HEX("334096"),
-							button = "alpha_github",
-							label = {"Github"}
-						}
-					}
-				} }
+				n = G.UIT.ROOT, config = { r = 0.5, align = "cm", padding = 0.2, colour = G.C.BLACK }, nodes = {
+					{ n = G.UIT.R, config = { padding = 0, align = "cl" }, nodes = { 
+						{ n = G.UIT.T, config = { text = localize("tss_credits_developer"), shadow = true, scale = 0.6 } },
+						{ n = G.UIT.T, config = { text = "Alpha N. Q.", shadow = true, scale = 0.6, colour = G.C.BLUE } } 
+					} }, 
+					{ n = G.UIT.R, config = { padding = 0, align = "cl", scale = 0.5 }, nodes = {
+						{ n = G.UIT.T, config = { text = localize("tss_credits_programminghelp"), shadow = true, scale = 0.45 } },
+						{ n = G.UIT.T, config = { text = "slimestuff.", shadow = true, scale = 0.45, colour = G.C.BLUE } } 
+					} },
+					{ n = G.UIT.R, config = { padding = 0, align = "cl", scale = 0.1 }, nodes = {
+						{ n = G.UIT.T, config = { text = localize("tss_credits_specialthanks"), shadow = true, scale = 0.45 } },
+						{ n = G.UIT.T, config = { text = "Slyvie, xCred_64", shadow = true, scale = 0.45, colour = G.C.BLUE } } 
+					} },
+					{ n = G.UIT.R, config = { padding = 0.2, align = "cm" }, nodes = {
+						UIBox_button{ minw = 3.85, colour = HEX("009DFF"), button = "alpha_bsky", label = {"BlueSky"} },
+						UIBox_button{ minw = 3.85, colour = HEX("FF0000"), button = "alpha_youtube", label = {"YouTube"} },
+						UIBox_button{ minw = 3.85, colour = HEX("334096"), button = "alpha_github", label = {"Github"} }
+					} } 
+				}
 			}
 		end
 	}
 end
+
+-- tab buttons --
 
 function G.FUNCS.alpha_bsky(e) love.system.openURL("https://bsky.app/profile/alphaanimates.bsky.social") end
 
@@ -169,6 +88,7 @@ local files = {
 	"misc",
 	"strawbs",
 	"blinds",
+	--"config",
 	"http"
 }
 
@@ -245,6 +165,15 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+    key = "strawb",
+    path = "strawb_soul.png",
+    px = 71,
+	py = 95,
+	atlas_table = 'ANIMATION_ATLAS',
+	frames = 9
+}
+
+SMODS.Atlas {
     key = "berry_n",
     path = "strawberry.png",
     px = 0,
@@ -278,5 +207,5 @@ tss_badges = {
 	["SO"] = function() return create_badge("The Associates", HEX('FF0000'), G.C.WHITE, 0.8 ) end,
 	["Goob"] = function() return create_badge("Goofy Goobers", HEX('45B5FF'), G.C.WHITE, 0.8 ) end,
 	["Xtra"] = function() return create_badge("Extras", HEX('43524C'), G.C.EDITION, 0.8 ) end,
-	["LoL"] = function() return create_badge("Love of Labor", HEX('FF4DED'), G.C.WHITE, 0.8 ) end,
+	["LoL"] = function() return create_badge("Love of Labor", HEX('FF4DED'), G.C.WHITE, 0.8 ) end
 }

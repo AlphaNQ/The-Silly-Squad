@@ -6,6 +6,7 @@ SMODS.Voucher{
     pos = { x = 0, y = 0 },
     discovered = false,
     cost = 10,
+    requires = { "v_elle_breakthrough" },
     config = { mod_mult = 2 },
     loc_vars = function(self, info_queue, card)
         return { vars = { self.config.mod_mult } }
@@ -26,7 +27,7 @@ SMODS.Voucher{
     pos = { x = 1, y = 0 },
     discovered = false,
     unlocked = false,
-    cost = 50,
+    cost = 20,
     requires = { "v_tss_cosmic" },
     config = { mod_mult = 4 },
     loc_vars = function(self, info_queue, card)

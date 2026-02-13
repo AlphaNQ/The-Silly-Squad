@@ -2,8 +2,8 @@
 By Alpha N. Q.
 
 Requirements:
-- Steamodded (>=1.0.0~)
-- Lovely (>=0.6)
+- Steamodded (>=1.0.0~BETA-1224a)
+- Lovely (>=0.9)
 
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
 

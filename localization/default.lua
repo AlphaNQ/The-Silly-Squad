@@ -106,10 +106,10 @@ return {
             j_tss_roulette = {
                 name = "Roulette",
                 text = {
-                    "Random chance to act",
-                    "as {C:red}Flame Noble{}, {C:planet}Heavenly Kitsune{},",
-                    "{C:purple}Arcane-nine{}, or {C:attention}Quick Fox{}",
-                    "at {C:attention}end of round.{}",
+                    "At {C:attention}end of round{},",
+                    "randomly switches between",
+                    "{C:red}Flame Noble{}, {C:planet}Heavenly Kitsune{},",
+                    "{C:purple}Arcane-nine{}, and {C:attention}Quick Fox{}",
                     "{C:inactive}(Currently: {C:blue}#1#{C:inactive})"
                 }
             }

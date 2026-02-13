@@ -129,3 +129,15 @@ move on to bugfixes along with the more complimentary additions and changes.
 
 - Restructured mod's file system cause i fear this might get big real fast. You can only add so many dividers as comments
 before they stop being effective.
+
+V 0.4.1
+
+- fixed a locked card's localization script.
+
+V 0.4.2
+
+- Reworded Roulette's description for extra clarity
+
+- Fixed Arcanine's ace counter. short story is that i was an idiot, as per usual.
+
+- Added more sprites and atlases. cant say what it's for yet ;3
