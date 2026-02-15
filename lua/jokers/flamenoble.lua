@@ -16,7 +16,7 @@ SMODS.Joker {
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.after then
-                if SMODS.pseudorandom_probability(card, 'tss_flame', 1, card.ability.extra.burn_odds) then
+            if SMODS.pseudorandom_probability(card, 'tss_flame', 1, card.ability.extra.burn_odds) then
                 for _, scored_card in ipairs(context.scoring_hand) do
                     if not card.ability.tss_burned or not card.ability.tss_favour then
                         scored_card:set_seal("tss_burned")

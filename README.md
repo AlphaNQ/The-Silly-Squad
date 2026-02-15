@@ -9,7 +9,7 @@ The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and m
 
 ## Current Content
 **6 New Jokers**: *And more to come!*
-each joker represents us and our ocs as people through their abilities:
+each joker represents us and our ocs as people along with a few inside jokes:
 - Flame Noble         [Uncommon]
   - 1 in 5 chance to apply the Burned Seal to scored cards
 - Heavenly Kitsune    [Rare]
@@ -19,11 +19,14 @@ each joker represents us and our ocs as people through their abilities:
   - Scored Aces give X2 Mult
   - Gains X0.5 Mult for every 10 Aces
 - Quick Fox           [Common]
-  - spawns a *random* Tarot card when Least scored hand is played
+  - spawns a *"random"* Tarot card when Least scored hand is played
 - Roulette            [Rare]
   - Random chance to act as either Flame Noble, Heavenly Kitsune, Arcane-nine or Quick Fox
 - Bubblegum           [Legendary]
   - X0.25 mult for every follower on Alpha's BlueSky Account.
+
+  This is a blatant copy of the Elle card from "ellejokers.". that is the entire joke about this card, and she knows of this
+  before I even published this update.
 
 **2 New Seals**: Of course we cant just have jokers that dont do *something* funky to other cards, so we have two seals that get applied using two of the four jokers. (please note one of them will be turned into a sticker later down the line)
 - Burned Seal
@@ -37,6 +40,7 @@ each joker represents us and our ocs as people through their abilities:
   - Legendary Jokers spawn 2x more frequently
 - Void
   - Legendary Jokers spawn 4x more frequently
+
 NOTE: These Vouchers will not appear if you do not have the [ellejokers. mod](https://github.com/ellestuff/ellejokers) installed.
 
 **A New Boss Blind**: made as a counter to some more... *broken* synergies

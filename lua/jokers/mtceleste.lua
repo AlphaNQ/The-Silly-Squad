@@ -7,16 +7,26 @@ SMODS.Joker{
     unlocked = false,
     rarity = 3,
     cost = 8,
-    config = { extra = { xmult = 5 } },
+    config = { extra = { xmult = 2.5 } },
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = {set = "Other", key = "tss_berry_n"}
         info_queue[#info_queue+1] = {set = "Other", key = "tss_berry_w"}
         info_queue[#info_queue+1] = {set = "Other", key = "tss_berry_g"}
+        info_queue[#info_queue+1] = {set = "Other", key = "tss_berry_wg"}
+        info_queue[#info_queue+1] = {set = "Other", key = "tss_berry_m"}
         return {
             vars = {
                 card.ability.extra.xmult
             }
         }
+    end,
+
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                mult = card.ability.extra.xmult
+            }
+        end
     end
 }

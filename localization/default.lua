@@ -42,7 +42,7 @@ return {
                 name = "Quick Fox",
                 text = {
                     'Creates a {E:1}"random"{} {C:tarot}Tarot{} card',
-                    "when {C:attention}least scored hand{} is played",
+                    "when {C:attention}most scored hand{} is played",
                     "{C:inactive}(Must have room){}",
                     caption.."The sneakiest in the animal kingdom ;3c"
                 }
@@ -123,15 +123,32 @@ return {
                 }
             },
             tss_berry_w = {
-                name = {"Winged",
+                name = {
+                    "Winged",
                     "Strawberry"
                 },
                 text = {
-                    "{C:attention}+1{} hand",
+                    "{C:attention}+1{} hand"
                 }
             },
             tss_berry_g = {
                 name = "Golden Strawberry",
+                text = {
+                    "Mt. Celeste gains",
+                    "{X:mult,C:white}X1{} Mult"
+                }
+            },
+            tss_berry_wg = {
+                name = {
+                    "Winged Golden",
+                    "Strawberry"
+                },
+                text = {
+                    "{C:attention}+2{} hands"
+                }
+            },
+            tss_berry_m = {
+                name = "Moon Strawberry",
                 text = {
                     "Adds {C:dark_edition}Negative{} to",
                     "a random joker"

@@ -6,11 +6,6 @@
 - Add Arcane-nine                                           [✅🪲]
     - Scored aces give X2 Mult
     - Gains X0.5 Mult for every 10 Aces
-- Add Quick Fox                                             [✅🪲]
-    - spawns a "random" Tarot card when Least scored hand is played
-    - 99% chance to spawn the fool, 1% chance to spawn judgement
-- Add Roulette												[🔃]
-    - Random Chance to act as Flame Noble, Kit's Favour, Arcanine-nine or Quick Fox(25% chance each)
 - Add Vouchers                                              [🔃]
     - Increases odds of seeing legendary jokers in the shop
 
@@ -22,14 +17,14 @@
     - Jokers with similar keywords to those you own are more likely to appear in the shop
 - Add Giggles
 	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
-- Add Bubblegum (Legendary)                                 [✅]
-    - X0.2 Mult per follower on Alpha's bsky account.
     NOTE: Card art wil be Alpha blowing a bubblegum bubble with one of Elle's ocs on it.
 - Add Mt. Celeste											[🔃]
 	- randomly spawns strawberries across the screen, cookie clicker style:
 		- Regular: adds X0.5 mult to joker
 		- Winged: gives +1 hand
-		- Golden: Adds negative to a random joker
+		- Golden: applies gold seal to random card
+		- Winged Golden: gives +2 hands
+		- Moonberry: Adds negative to a random joker
 - Rebalance as necessary
 
 ---- BUG FIXES ----
@@ -37,7 +32,6 @@
 - Suspicious that Flame Noble might be applying burn seal by the hand and not by the card.
 - Heavenly Kitsune only applies Kit's favour to one card per hand
 - Arcane-nine doesnt reset the count.
-- Quick fox activates for every played hand, and activates twice when full house is played.
 ]]
 
 -- ====================META=DATA====================

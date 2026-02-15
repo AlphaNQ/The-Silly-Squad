@@ -141,3 +141,11 @@ V 0.4.2
 - Fixed Arcanine's ace counter. short story is that i was an idiot, as per usual.
 
 - Added more sprites and atlases. cant say what it's for yet ;3
+
+V 0.4.3
+
+- Added more... things~ ;3
+
+- Finally fixed the problem with Quick Fox where it would trigger on every hand. card now works as intended!
+
+- Modified Quick Fox to trigger on most played hand instead of least played.
