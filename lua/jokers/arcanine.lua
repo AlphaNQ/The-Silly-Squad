@@ -21,6 +21,7 @@ SMODS.Joker {
     end,
     
     calculate = function(self, card, context)
+        local reset = false
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 14 then
             if card.ability.extra.ace_count > 0 then
                 card.ability.extra.ace_count = card.ability.extra.ace_count - 1
@@ -29,23 +30,26 @@ SMODS.Joker {
                 xmult = card.ability.extra.xmult
             }
         end
+        if card.ability.extra.ace_count == 0 then
+            reset = true
+            card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
+            card.ability.extra.ace_count = 10
+        end
         if context.joker_main then
             for _, scored_card in ipairs(context.scoring_hand) do
-                if scored_card:get_id() == 14 then
-                    if card.ability.extra.ace_count > 0 then
+                if card.ability.extra.ace_count > 0 then
+                    if reset then
+                        reset = false
+                        return {
+                            message = localize('k_upgrade_ex'),
+                        }
+                    else
                         return {
                             message = card.ability.extra.ace_count .. " remaining"
                         }
                     end
-                    if card.ability.extra.ace_count == 0 then
-                        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_mod
-                        card.ability.extra.ace_count = 10
-                        return {
-                            message = localize('k_upgrade_ex'),
-                        }
-                    end
                 end
             end
-        end
+        end  
     end
 }

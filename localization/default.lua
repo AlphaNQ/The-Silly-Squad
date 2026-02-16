@@ -31,6 +31,13 @@ return {
 					"{E:1,s:1.3}?????"
 				}
             },
+            j_tss_ferret = {
+                name = "Ferret Lady",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult if played",
+                    "hand is a {C:attention}Flush{} type"
+                }
+            },
             j_tss_flame = {
                 name = "Flame Noble",
                 text = {
@@ -51,7 +58,7 @@ return {
                 name = "Giggles",
                 text = {
                     "At the start of the round, eats",
-                    "any food based joker to its", 
+                    "any food based Joker to its", 
                     "right and adds double the sell",
                     "value to mult"
                 },
@@ -62,9 +69,9 @@ return {
             j_tss_helix = {
                 name = "Helix",
                 text = {
-                    "Eats a random joker to either",
+                    "Eats a random Joker to either",
                     "side of itself and gains 0.1",
-                    "mult per joker eaten"
+                    "mult per Joker eaten"
                 },
                 unlock = {
                     "ERR 404: Card Not Found",
@@ -82,7 +89,7 @@ return {
             j_tss_mtceleste = {
                 name = "Mt. Celeste",
                 text = {
-                    "While this joker is active,",
+                    "While this Joker is active,",
                     "spawns {C:red}strawberries{}",
                     "across the screen,",
                     "giving various buffs.",
@@ -151,7 +158,7 @@ return {
                 name = "Moon Strawberry",
                 text = {
                     "Adds {C:dark_edition}Negative{} to",
-                    "a random joker"
+                    "a random Joker"
                 }
             },
             tss_burned_seal = {
@@ -160,13 +167,6 @@ return {
                     '{C:blue}#1#{} Chips | {X:mult,C:white}X#2#{} Mult', 
                     'Destroys after {C:attention}#3#{} uses', 
                     '{C:inactive}(#4# Use(s) left){}'  -- -50 chips, X4 Mult, 10 uses, (use counter)
-                }
-            },
-            tss_favour = {
-                name = "Kit's Favor",
-                text = {
-                    'Retrigger this',
-                    'card {C:attention}#1#{} times{}' -- 5 times
                 }
             },
             tss_favour_seal = {

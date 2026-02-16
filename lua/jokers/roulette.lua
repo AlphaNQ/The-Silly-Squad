@@ -33,7 +33,7 @@ SMODS.Joker{
         if context.end_of_round and context.main_eval then
             -- Sets the card's rand to a random listed card
             set_roulette_card(card)
-            SMODS.calculate_effect({message=localize('k_reroll')},card) 
+            SMODS.calculate_effect({message=localize('k_reset')},card) 
         end
 
         -- Run the calculate function of the other card

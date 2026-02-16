@@ -1,5 +1,14 @@
 return {
     descriptions = {
+        Blind = {
+            bl_tss_student = {
+                name = "L'élève fainéant",
+                text = {
+                    "Toutes les cartes Aces",
+                    "perdent leurs bonus"
+                }
+            }
+        },
         Joker = {
             j_tss_bnop = {
                 name = "Cannine Occulte",
@@ -19,6 +28,13 @@ return {
 					caption.."*te fait exploser dans me rêves*"
                 }
             },
+            j_tss_ferret = {
+                name = "Ferret Lady",
+                text = {
+                    "Multi {X:mult,C:white}X#1#{} si la main",
+                    "jouée contient une {C:attention}Couleur{}"
+                }
+            },
             j_tss_flame = {
                 name = "Flame Royale",
                 text = {
@@ -36,6 +52,24 @@ return {
                     caption.."Le plus sournois du royaume des animaux ;3c"
                 }
             },
+            j_tss_giggles = {
+                name = "Giggles",
+                text = {
+                    ""
+                },
+                unlock = {
+                    "ERR 404: Carte introuvable",
+                }
+            },
+            j_tss_helix = {
+                name = "Helix",
+                text = {
+                    ""
+                },
+                unlock = {
+                    "ERR 404: Carte introuvable",
+                }
+            },
             j_tss_kitsune = {
                 name = "Goupil des Cieux",
                 text = {
@@ -45,12 +79,88 @@ return {
                     "les Aces acquise la {C:purple,E:1}Faveur de Faux{}" --1 in 8, 1 in 16
                 }
             },
+            j_tss_mtceleste = {
+                name = "Le mont. Celeste",
+                text = {
+                    "Pendant que ce Joker",
+                    "est actif, faire apparaître",
+                    "des {C:red}fraises{} sur l'écran,",
+                    "donnant divers effets.",
+                    "{C:inactive}(Actuellement: Multi. {X:mult,C:white}X#1#{C:inactive})"
+                },
+                unlock = {
+                    "ERR 404: Carte introuvable",
+                }
+            },
+            j_tss_mykra = {
+                name = "MYKRA",
+                text = {
+                    ""
+                },
+                unlock = {
+                    "ERR 404: Carte introuvable",
+                }
+            },
             j_tss_roulette = {
                 name = "Roulette",
                 text = {
                     "Chance aléatoire d'agir",
                     "comme {C:red}Flame Royale{}, {C:planet}Goupil des Cieux{},",
                     "{C:purple}Cannine Occulte{}, ou {C:attention}Renard Rapide{}"
+                }
+            }
+        },
+        Other = {
+            tss_berry_n = {
+                name = "Fraise",
+                text = {
+                    "Multi {X:mult,C:white}X0.5{} pour",
+                    "Le mont. Celeste"
+                }
+            },
+            tss_berry_w = {
+                name = "Fraise Ailée",
+                text = {
+                    "{C:attention}+1{} main"
+                }
+            },
+            tss_berry_g = {
+                name = "Fraise Dorée",
+                text = {
+                    "Multi {X:mult,C:white}X1{} pour",
+                    "Le mont. Celeste"
+                }
+            },
+            tss_berry_wg = {
+                name = {
+                    "Fraise d'Or",
+                    "Ailée"
+                },
+                text = {
+                    "{C:attention}+2{} mains"
+                }
+            },
+            tss_berry_m = {
+                name = "Fraise Lunaire",
+                text = {
+                    "Ajoute {C:dark_edition}Négatif{} à",
+                    "un Joker aléatoire"
+                }
+            },
+            tss_burned_seal = {
+                name = 'Brûler',
+                text = {
+                    '{C:blue}#1#{} Jetons | Multi {X:mult,C:white}X#2#{}', 
+                    "Détruite après qu'elle",
+                    'soit jouée {C:attention}#3#{} fois', 
+                    '{C:inactive}(#4# restante){}'  -- -50 jetons, X4 Multi, 10 uses, (use counter)
+                }
+            },
+            tss_favour_seal = {
+                name = "Faveur du Faux",
+                text = {
+                    'Déclenche à nouveau cette',
+                    'carte {C:attention}#1#{} fois{}' -- 5 fois
                 }
             }
         },
@@ -70,37 +180,12 @@ return {
                 }
             },
         },
-        Other = {
-            tss_burned_seal = {
-                name = 'Brûler',
-                text = {
-                    '{C:blue}#1#{} Jetons | Multi {X:mult,C:white}X#2#{}', 
-                    "Détruite après qu'elle",
-                    'soit jouée {C:attention}#3#{} fois', 
-                    '{C:inactive}(#4# restante){}'  -- -50 jetons, X4 Multi, 10 uses, (use counter)
-                }
-            },
-            tss_favour = {
-                name = "Faveur du Faux",
-                text = {
-                    'Déclenche à nouveau cette',
-                    'carte {C:attention}#1#{} fois{}' -- 5 fois
-                }
-            },
-            tss_favour_seal = {
-                name = "Faveur du Faux",
-                text = {
-                    'Déclenche à nouveau cette',
-                    'carte {C:attention}#1#{} fois{}' -- 5 fois
-                }
-            }
-        }
+        
     },
     misc = {
         labels = {
             tss_burned_seal = "Seau Brûlant",
             tss_favour_seal = "Seau de Faveur",
-            tss_favour = "Faveur"
         },
         dictionary = {
             k_burn = "Bruler!",

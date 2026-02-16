@@ -149,3 +149,22 @@ V 0.4.3
 - Finally fixed the problem with Quick Fox where it would trigger on every hand. card now works as intended!
 
 - Modified Quick Fox to trigger on most played hand instead of least played.
+
+V 0.4.4
+
+- Updated French localization
+
+- Changed Roulette to display "k_reset" message instead of "k_reroll" for accuracy.
+
+- Fixed Arcane-nine not reseting ace count properly.
+
+- Fixed Flame Noble applying the Burned Seal for every card in the hand instead of just one.
+
+-Mildly updated Joker Atlas sheet.
+
+- Added Ferret Lady Joker card
+  - x4 mult per Flush type hand played this run.
+
+- Added Quick Fox card art.
+
+- Currently working on adding a new Challenge. (IN PROGRESS, NOT CURRENTLY ACCESSIBLE)

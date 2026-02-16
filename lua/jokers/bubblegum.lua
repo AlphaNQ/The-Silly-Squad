@@ -3,7 +3,7 @@ if not next(SMODS.find_mod("ellejokers")) then return end
 SMODS.Joker{
     atlas = 'joker',
     key = 'bubble',
-    pos = { x = 6, y = 0 }, soul_pos = { x = 0, y = 0 },
+    pos = { x = 9, y = 1 }, soul_pos = { x = 0, y = 0 },
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.Xtra() end,
     unlocked = false,
     rarity = 4,

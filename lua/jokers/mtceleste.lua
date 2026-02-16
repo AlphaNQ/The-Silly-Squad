@@ -1,7 +1,7 @@
 SMODS.Joker{
     atlas = 'joker',
     key = 'mtceleste',
-    pos = { x = 0, y = 1 }, soul_pos = { x = 1, y = 1 },
+    pos = { x = 0, y = 1 }, soul_pos = { x = 0, y = 2 },
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.LoL() end,
     discovered = false,
     unlocked = false,
