@@ -190,7 +190,7 @@ before they stop being effective.
 
 - Updated mod requirements to reflect upcoming cards along with adding links to each requirement.
 
-## V 0.5.0
+## V 0.5.0 /// Gambling x 2
 
 - Updated Joker Badges.
 
