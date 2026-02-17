@@ -183,3 +183,9 @@ before they stop being effective.
 
 - Fixed bug with Flame noble and Heavenly Kitsune where they would only trigger for one card in hand.
   NOTE: This fix has now caused another problem where their trigger message pops up despite cards not triggering. another fix is currently in progress.
+
+## V.0.4.6
+
+- Fixed the trigger message problem mentioned last update.
+
+- Updated mod requirements to reflect upcoming cards along with adding links to each requirement.

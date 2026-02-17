@@ -11,6 +11,10 @@
     - Jokers with similar keywords to those you own are more likely to appear in the shop
 - Add Giggles												[🔃]
 	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
+- Add Goblin Tactics
+	- For every $5 you have, this joker gains ×1 Mult. Lose $5 when triggered. If you run out of money, this card is destroyed
+- Add Hamuel's 518 Ham Shanks
+	- 2 in 4 chance to CRITICAL HIT when a card is triggered (×3 Mult, ×3 Chips)
 
 - Add Mt. Celeste											[🔃]
 	- randomly spawns strawberries across the screen, cookie clicker style:
@@ -23,10 +27,10 @@
 	- pay $50 to instantly win blind, $100 to win run
 
 - Rebalance as necessary
-
+----   NOTES   ----
+- Add seal protection to Flame Noble and Heavenly Kitsune.
 ---- BUG FIXES ----
-
-- Flame Noble and Heavenly Kitsune trigger messages pop without trigger.
+- Nothing to do!! :D
 ]]
 
 -- ====================META=DATA====================

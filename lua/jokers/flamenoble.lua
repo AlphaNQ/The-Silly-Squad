@@ -15,16 +15,21 @@ SMODS.Joker {
     end,
     
     calculate = function(self, card, context)
-        if context.before and context.cardarea == G.jokers then
+        if context.after and context.cardarea == G.jokers then
+            local trigger = false
             for k, scored_card in ipairs(context.scoring_hand) do
                 if SMODS.pseudorandom_probability(card, 'tss_flame', 1, card.ability.extra.burn_odds) then
+                    trigger = true
                     scored_card:set_seal("tss_burned")
 	            end
             end
-            return {
-                message = localize('k_burn'),
-                colour = HEX('660000')
-            }
+            if trigger then
+                trigger = false
+                return {
+                    message = localize('k_burn'),
+                    colour = HEX('660000')
+                }
+            end
         end
     end
 }

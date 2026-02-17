@@ -2,8 +2,9 @@
 By Alpha N. Q.
 
 Requirements:
-- Steamodded (>=1.0.0~BETA-1224a)
-- Lovely (>=0.9)
+- [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods)
+- [Lovely (>=0.9)](https://github.com/ethangreen-dev/lovely-injector)
+- [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils)
 
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
 
@@ -51,23 +52,17 @@ NOTE: These Vouchers will not appear if you do not have the [ellejokers. mod](ht
 ## FAQ:
 *"Why is the earliest version of this mod V 0.3.1?"*
 
-I've been hesitating to upload this to Github since i started development, fearing it's not good enough to be part of any "official" project of mine, but after a while of expanding on it, i decided why not!
-
-Sorry to say all previous versions of this mod before this one are unplayable, but i do still have a changelog of everything because i wanted to be very meticulous about documenting my progress :3
+I've been hesitating to upload this to Github since i started development, fearing it's not good enough to be part of any "official" project of mine, but after a while of expanding on it, i decided why not! Sorry to say all previous versions of this mod before 0.3.1 are unplayable, but i do still have a changelog of everything because i wanted to be very meticulous about documenting my progress :3
 
 *"I want to use some of your code to learn for myself, is that chill?"*
 
-Yeah dude, by all means go ahead! Coding as an entire industry is built on copying and pasting from more experienced people, so it'd be unconstitutional for me to deny you your birthright as an aspiring programmer!
-
-Hell, you even have full permission to DM me on any of my socials if you're confused about anything i made and how it was done!
-please, do literally any of this!
-**Just dont. use. ChatGPT.**
+Yeah dude, by all means go ahead! Coding as an entire industry is built on copying and pasting from more experienced people, so it'd be unconstitutional for me to deny you your birthright as an aspiring programmer! Hell, you even have full permission to DM me on any of my socials if you're confused about anything i made and how it was done! Please, do literally any of this! **Just dont. use. ChatGPT.**
 
 *"How much have you thought of balancing this mod?"*
 
 Not at all! :D
 
-This is a dumb mod made by a dumb fuck and her dumb fucks for dumb reasons. This entire mod is made for fun and composed almost entirely of me, my friends and my partners saying "wouldn't it be funny if ___" and i decided to **WRITE** THAT SHIT!
+This is a dumb mod made by a dumb fuck and her dumb fucks for dumb reasons. This entire mod is made for fun and composed almost entirely of me, my friends and my partners saying "Wouldn't it be funny if ___?" and i decided to **WRITE** THAT SHIT!
 if you care about a balanced experience and dont like fun, leave now >:C
 
 *"I found a bug, what do I do?"*
