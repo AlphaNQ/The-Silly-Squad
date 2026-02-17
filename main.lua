@@ -1,20 +1,17 @@
 --[[TO DO LIST
 
-- Add Heavenly Kitsune                                      [✅🪲]
-    - 1 in 8 chance to turn scored cards into Aces
-    - 1 in 16 chance for scored Aces to gain Kit's Favour
 - Add Vouchers                                              [🔃]
     - Increases odds of seeing legendary jokers in the shop
 
-- Add Cred (boss blind)										[❌]
-	- first hand only scores if it's more than 25% of required score
-- Add Helix
+- Add Bankroll (cred)										[🔃]
+	- Gamble half ya cash, either win double the amount back or double blind requirement. recharges at start of each round
+- Add Helix													[🔃]
 	- eats joker to either side of itself at random, gains 0.1 mult per joker
-- Add MYKRA (uncommon)
+- Add MYKRA (uncommon)										[🔃]
     - Jokers with similar keywords to those you own are more likely to appear in the shop
-- Add Giggles
+- Add Giggles												[🔃]
 	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
-	
+
 - Add Mt. Celeste											[🔃]
 	- randomly spawns strawberries across the screen, cookie clicker style:
 		- Regular: adds X0.5 mult to joker
@@ -22,12 +19,14 @@
 		- Golden: applies gold seal to random card
 		- Winged Golden: gives +2 hands
 		- Moonberry: Adds negative to a random joker
+- Add Bribery
+	- pay $50 to instantly win blind, $100 to win run
+
 - Rebalance as necessary
 
 ---- BUG FIXES ----
-- Flame Noble applies burn seal by the hand and not by the card.
-- Heavenly Kitsune only applies Kit's favour to one card per hand
-- Arcane-nine doesnt have working upgrade message.
+
+- Flame Noble and Heavenly Kitsune trigger messages pop without trigger.
 ]]
 
 -- ====================META=DATA====================
@@ -78,7 +77,7 @@ local files = {
 	"misc",
 	"strawbs",
 	"blinds",
-	--"config",
+	--"config",					--currently commented out as its functions do not work atm. working on a fix.
 	"http"
 }
 
@@ -88,7 +87,8 @@ local jokers = {
     "flamenoble",
     "quickfox",
 	"roulette",
-	"ferretlady",
+	"ferretlady",				-- this and bankroll will swithc places eventually
+	"bankroll",
 	"mykra",
 	"giggles",
 	"helix",

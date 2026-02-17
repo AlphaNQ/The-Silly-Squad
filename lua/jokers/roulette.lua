@@ -18,7 +18,7 @@ SMODS.Joker{
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.Xtra() end,
     discovered = true,
     rarity = 3,
-    cost = 6,
+    cost = 8,
     config = { rand = 'j_tss_flame' },
 
     loc_vars = function(self, info_queue, card)

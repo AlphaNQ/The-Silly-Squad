@@ -5,7 +5,7 @@ SMODS.Joker {
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.SO() end,
     discovered = true,
     rarity = 3,
-    cost = 10,
+    cost = 8,
     config = { extra = { ace_odds = 8, fave_odds = 16 } },
 
     loc_vars = function(self, info_queue, card)
@@ -16,30 +16,33 @@ SMODS.Joker {
     end,
     
     calculate = function(self, card, context)
+        -- Ace Conversion
+        if context.before and context.cardarea == G.jokers then
+            for k, scored_card in ipairs(context.scoring_hand) do
+                if scored_card:get_id() ~= 14 and SMODS.pseudorandom_probability(card, 'tss_kitsune', 1, card.ability.extra.ace_odds) then
+                    SMODS.change_base(scored_card, nil, 'Ace')      --Turns card into Ace
+                end
+            end
+            return {
+                message = localize('k_poof'),                       --Shows message under Joker
+                colour = G.C.SECONDARY_SET.Planet
+            }
+        end
+        -- Seal Application
         if context.cardarea == G.jokers and context.after then
-            for _, scored_card in ipairs(context.scoring_hand) do
-                -- Seal Application
+            for k, scored_card in ipairs(context.scoring_hand) do
                 if scored_card:get_id() == 14 then
                     if SMODS.pseudorandom_probability(card, 'tss_kitsune', 1, card.ability.extra.fave_odds) then
                         if not card.ability.tss_favour or not card.ability.tss_burned then
-                            scored_card:set_seal("tss_favour")              --Applies Kit's Favor
+                            scored_card:set_seal("tss_favour")      --Applies Kit's Favor
                         end
-                        return {
-                            message = localize('k_kiss'),                   --Shows message under Joker
-                            colour = G.C.SECONDARY_SET.Planet
-                        }
-                    end
-                -- Ace Conversion
-                else
-                    if SMODS.pseudorandom_probability(card, 'tss_kitsune', 1, card.ability.extra.ace_odds) then
-                        SMODS.change_base(scored_card, nil, 'Ace')          --Turns card into Ace   
-                        return {
-                            message = localize('k_poof'),                   --Shows message under Joker
-                            colour = G.C.SECONDARY_SET.Planet
-                        }
                     end
                 end
             end
+            return {
+                message = localize('k_kiss'),                       --Shows message under Joker
+                colour = G.C.SECONDARY_SET.Planet
+            }
         end
     end
 }

@@ -1,11 +1,11 @@
 SMODS.Joker{
     atlas = 'joker',
-    key = 'mykra',
-    pos = { x = 7, y = 0 }, soul_pos = { x = 0, y = 0 },
+    key = 'bankroll',
+    pos = { x = 0, y = 1 }, soul_pos = { x = 0, y = 0 },
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.Goob() end,
     discovered = false,
     unlocked = false,
-    rarity = 3,
-    cost = 7,
-    config = { extra = {} }   
+    rarity = 2,
+    cost = 6,
+    config = { extra = {} }
 }

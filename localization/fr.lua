@@ -1,5 +1,6 @@
 return {
     descriptions = {
+        Back = {},
         Blind = {
             bl_tss_student = {
                 name = "L'élève fainéant",
@@ -9,14 +10,28 @@ return {
                 }
             }
         },
+        Edition = {},
+        Enhanced = {},
         Joker = {
+            j_tss_bankroll = {
+                name = "Financer",
+                text = {
+                    "{C:attention}Une fois par Manche:",
+                    "pari une moitié de ton {C:money}$$${},",
+                    "{C:green}gagner le double en tour{} ou",
+                    "{C:red}doubler jetons nécessaire"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found"
+                }
+            },
             j_tss_bnop = {
                 name = "Cannine Occulte",
                 text = {
-                    "Les Aces acquise donne {X:mult,C:white}X#1#{} Multi",
-                    "Gagnez {X:mult,C:white}X#2#{} Multi toutes les {C:attention}#3#{} Aces",
-                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#4#{C:inactive})",
-                    "{C:inactive}(#5# Aces restante){}"
+                    "Les Aces acquise donne",
+                    "{X:mult,C:white}X#1#{} Multi, gagnez {X:mult,C:white}X#2#{} Multi",
+                    "toutes les {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
+                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#5#{C:inactive})"
                 }
             },
             j_tss_bubble = {
@@ -29,7 +44,7 @@ return {
                 }
             },
             j_tss_ferret = {
-                name = "Ferret Lady",
+                name = "Dame Furet",
                 text = {
                     "Multi {X:mult,C:white}X#1#{} si la main",
                     "jouée contient une {C:attention}Couleur{}"
@@ -164,7 +179,12 @@ return {
                 }
             }
         },
-        Voucher={
+        Planet = {},
+        Spectral = {},
+        Stake = {},
+        Tag = {},
+        Tarot = {},
+        Voucher = {
             v_tss_cosmic = {
                 name = "Cosmique",
                 text = {
@@ -183,10 +203,11 @@ return {
         
     },
     misc = {
-        labels = {
-            tss_burned_seal = "Seau Brûlant",
-            tss_favour_seal = "Seau de Faveur",
-        },
+        achievement_descriptions = {},
+        achievement_names = {},
+        blind_states = {},
+        challenge_names = {},
+        collabs = {},
         dictionary = {
             k_burn = "Bruler!",
             k_char = "Braiser!",
@@ -196,6 +217,20 @@ return {
             tss_credits_developer = "Développé Par: ",
             tss_credits_programminghelp = "Assistante Programmeur: ",
             tss_credits_specialthanks = "Testeur de Jeux: "
-        }
+        },
+        high_scores = {},
+        labels = {
+            tss_burned_seal = "Seau Brûlant",
+            tss_favour_seal = "Seau de Faveur",
+        },
+        poker_hand_descriptions = {},
+        poker_hands = {},
+        quips = {},
+        ranks = {},
+        suits_plural = {},
+        suits_singular = {},
+        tutorial = {},
+        v_dictionary = {},
+        v_text = {},
     }
 }

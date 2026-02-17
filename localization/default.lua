@@ -1,5 +1,6 @@
 return {
     descriptions = {
+        Back = {},
         Blind = {
             bl_tss_student = {
                 name = 'The "F" Student',
@@ -9,14 +10,28 @@ return {
                 }
             }
         },
+        Edition = {},
+        Enhanced = {},
         Joker = {
+            j_tss_bankroll = {
+                name = "Bankroll",
+                text = {
+                    "{C:attention}Once per Round:",
+                    "Gamble half your {C:money}$$${},",
+                    "{C:green}win double back{} or",
+                    "{C:red}double required chips"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found"
+                }
+            },
             j_tss_bnop = {
                 name = "Arcane-nine",
                 text = {
-                    "Scored Aces give {X:mult,C:white}X#1#{} Mult",
-                    "Gains {X:mult,C:white}X#2#{} Mult for every {C:attention}#3#{} Aces",
-                    "{C:inactive}(Currently {X:mult,C:white}X#4#{C:inactive} Mult)",
-                    "{C:inactive}(#5# Aces Remaining){}"
+                    "Scored Aces give {X:mult,C:white}X#1#{} Mult,",
+                    "gains {X:mult,C:white}X#2#{} Mult for",
+                    "every {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
+                    "{C:inactive}(Currently {X:mult,C:white}X#5#{C:inactive} Mult)"
                 }
             },
             j_tss_bubble = {
@@ -177,6 +192,11 @@ return {
                 }
             }
         },
+        Planet = {},
+        Spectral = {},
+        Stake = {},
+        Tag = {},
+        Tarot = {},
         Voucher = {
             v_tss_cosmic = {
                 name = "Cosmic",
@@ -198,10 +218,11 @@ return {
         }
     },
     misc = {
-        labels = {
-            tss_burned_seal = "Burned Seal",
-            tss_favour_seal = "Favor Seal"
-        },
+        achievement_descriptions = {},
+        achievement_names = {},
+        blind_states = {},
+        challenge_names = {},
+        collabs = {},
         dictionary = {
             k_burn = "Burned!",
             k_char = "Charred!",
@@ -211,6 +232,20 @@ return {
             tss_credits_developer = "Developed By: ",
             tss_credits_programminghelp = "Assistant Programmer: ",
             tss_credits_specialthanks = "Playtesters: "
-        }
+        },
+        high_scores = {},
+        labels = {
+            tss_burned_seal = "Burned Seal",
+            tss_favour_seal = "Favor Seal"
+        },
+        poker_hand_descriptions = {},
+        poker_hands = {},
+        quips = {},
+        ranks = {},
+        suits_plural = {},
+        suits_singular = {},
+        tutorial = {},
+        v_dictionary = {},
+        v_text = {},
     }
 }

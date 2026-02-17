@@ -6,6 +6,6 @@ SMODS.Joker{
     discovered = false,
     unlocked = false,
     rarity = 2,
-    cost = 20,
+    cost = 6,
     config = { extra = {} }
 }

@@ -5,7 +5,7 @@ SMODS.Joker {
     set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.SO() end,
     discovered = true,
     rarity = 1,
-    cost = 3,
+    cost = 4,
     config = { extra = { tarot_odds = 10 } },
 
     calculate = function(self, card, context)
