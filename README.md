@@ -24,7 +24,7 @@ each joker represents us and our ocs as people along with a few inside jokes:
 - Roulette                    [Rare]
   - Random chance to act as either Flame Noble, Heavenly Kitsune, Arcane-nine or Quick Fox
 - Bubblegum                   [Legendary]
-  - X0.25 mult for every follower on Alpha's BlueSky Account
+  - X0.2 mult for every follower on Alpha's BlueSky Account
   (This is a blatant copy of the Elle card from "[ellejokers.](https://github.com/ellestuff/ellejokers)". that is the entire joke about this card, and she knew of this before I even published this card in update 0.4.0.)
 - **And more!!**
 

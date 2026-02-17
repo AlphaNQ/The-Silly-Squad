@@ -17,8 +17,8 @@ return {
                 name = "Bankroll",
                 text = {
                     "{C:attention}Once per Round:",
-                    "Gamble half your {C:money}$$${},",
-                    "{C:green}win double back{} or",
+                    "Gamble half your {C:money}$$${} {C:inactive}[#1#]{},",
+                    "{C:green}win double back{} {C:inactive}[#2#]{} or",
                     "{C:red}double required chips"
                 },
                 unlock = {
@@ -81,6 +81,20 @@ return {
                     "ERR 404: Card Not Found",
                 }
             },
+            j_tss_goblin = {
+                name = "Goblin Tactics",
+                text = {
+                    "For every {C:money}$#1#{} you have,",
+                    "Joker gains {X:mult,C:white}X#2#{} Mult",
+                    "Lose {C:money}$#1#{} when triggered",
+                    "Joker is {C:red}destroyed{} if you",
+                    "run out of money",
+                    "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
+                }
+            },
             j_tss_helix = {
                 name = "Helix",
                 text = {
@@ -133,6 +147,17 @@ return {
                     "{C:red}Flame Noble{}, {C:planet}Heavenly Kitsune{},",
                     "{C:purple}Arcane-nine{}, and {C:attention}Quick Fox{}",
                     "{C:inactive}(Currently: {C:blue}#1#{C:inactive})"
+                }
+            },
+            j_tss_shanks = {
+                name = "Hamuel's 518 Ham Shanks",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "{C:crit}CRITICAL HIT{} when a card is triggered",
+                    "{C:inactive}(gives {X:chips,C:white}X#3#{C:inactive} Chips and {X:mult,C:white}X#4#{C:inactive} Mult)"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
                 }
             }
         },

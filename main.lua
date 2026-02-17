@@ -91,9 +91,11 @@ local jokers = {
     "flamenoble",
     "quickfox",
 	"roulette",
-	"ferretlady",				-- this and bankroll will swithc places eventually
 	"bankroll",
+	"ferretlady",
 	"mykra",
+	"goblin",
+	"shanks",
 	"giggles",
 	"helix",
 	"mtceleste",
@@ -115,6 +117,7 @@ end
 loc_colour('red')
 G.ARGS.LOC_COLOURS['quote'] = HEX('FA620CFF')
 G.ARGS.LOC_COLOURS['burn'] = HEX('660000')
+G.ARGS.LOC_COLOURS['crit'] = HEX('00FF00')
 
 -- Text Prefix --
 
@@ -198,9 +201,11 @@ SMODS.Atlas {
 -- ======================BADGES=====================
 
 tss_badges = {
-	["Quake"] = function() return create_badge("The Leader", HEX('FFEE70'), G.C.MONEY, 0.8 ) end,
-	["SO"] = function() return create_badge("The Associates", HEX('FF0000'), G.C.WHITE, 0.8 ) end,
-	["Goob"] = function() return create_badge("Goofy Goobers", HEX('45B5FF'), G.C.WHITE, 0.8 ) end,
-	["Xtra"] = function() return create_badge("Extras", HEX('43524C'), G.C.EDITION, 0.8 ) end,
-	["LoL"] = function() return create_badge("Love of Labor", HEX('FF4DED'), G.C.WHITE, 0.8 ) end
+	Quake = { text = "The Leader", colour = HEX('FFEE70'), text_colour = G.C.MONEY },
+	SO = { text = "The Pookies", colour = HEX('FF0000') },
+	Bun = { text = "Bun", colour = HEX('FADFA0'), text_colour = HEX('C17524') },
+	Fop = { text = "Fop", colour = HEX('FBA124') },
+	Goob = { text = "Goofy Goobers", colour = HEX('45B5FF') },
+	Xtra = { text = "Extras", colour = HEX('43524C'), text_colour = G.C.EDITION },
+	LoL = { text = "Love of Labor", colour = HEX('FF4DED') }
 }

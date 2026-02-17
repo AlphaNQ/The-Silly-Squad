@@ -4,7 +4,9 @@ SMODS.Joker{
     atlas = 'joker',
     key = 'bubble',
     pos = { x = 9, y = 1 }, soul_pos = { x = 0, y = 0 },
-    set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.Xtra() end,
+    set_badges = function(self, card, badges) if (self.discovered) then
+		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Xtra)
+	end end,
     unlocked = false,
     rarity = 4,
     cost = 20,

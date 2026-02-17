@@ -189,3 +189,12 @@ before they stop being effective.
 - Fixed the trigger message problem mentioned last update.
 
 - Updated mod requirements to reflect upcoming cards along with adding links to each requirement.
+
+## V 0.5.0
+
+- Updated Joker Badges.
+
+- Added Bankroll Joker card
+  - Gamble away half your total $$$, either:
+    - Win double your money back.
+    - double current blind requirement.

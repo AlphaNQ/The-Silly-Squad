@@ -17,8 +17,8 @@ return {
                 name = "Financer",
                 text = {
                     "{C:attention}Une fois par Manche:",
-                    "pari une moitié de ton {C:money}$$${},",
-                    "{C:green}gagner le double en tour{} ou",
+                    "pari une moitié de ton {C:money}$$${} {C:inactive}[#1#]{},",
+                    "{C:green}gagner le double en tour{} {C:inactive}[#2#]{} ou",
                     "{C:red}doubler jetons nécessaire"
                 },
                 unlock = {
@@ -76,6 +76,20 @@ return {
                     "ERR 404: Carte introuvable",
                 }
             },
+            j_tss_goblin = {
+                name = "Lutin Tactics",
+                text = {
+                    "Pour chaque {C:money}$#1#{}, Joker",
+                    "gagne {X:mult,C:white}X#2#{} Multi",
+                    "Perde {C:money}$#1#{} quand Joker déclenche",
+                    "Joker est {C:red}détruit{} si",
+                    "à court d'argent",
+                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#2#{C:inactive})"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
+                }
+            },
             j_tss_helix = {
                 name = "Helix",
                 text = {
@@ -122,6 +136,18 @@ return {
                     "Chance aléatoire d'agir",
                     "comme {C:red}Flame Royale{}, {C:planet}Goupil des Cieux{},",
                     "{C:purple}Cannine Occulte{}, ou {C:attention}Renard Rapide{}"
+                }
+            },
+            j_tss_shanks = {
+                name = "Hamuel's 518 Jarrets de Jambon",
+                text = {
+                    "{C:green}#1# chance(s) sur #2#{} de",
+                    "{C:crit}COUP CRITIQUE{} quand une carte",
+                    "marque des points",
+                    "{C:inactive}(donne {X:chips,C:white}X#3#{C:inactive} Jetons et {X:mult,C:white}X#4#{C:inactive} Multi)"
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
                 }
             }
         },

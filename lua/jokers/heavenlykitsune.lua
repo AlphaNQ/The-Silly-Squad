@@ -2,7 +2,10 @@ SMODS.Joker {
     atlas = 'joker',
     key = 'kitsune',
 	pos = { x = 2, y = 0 }, soul_pos = { x = 0, y = 0 },
-    set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.SO() end,
+    set_badges = function(self, card, badges) if (self.discovered) then
+		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Bun)
+		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.SO)
+	end end,
     discovered = true,
     rarity = 3,
     cost = 8,

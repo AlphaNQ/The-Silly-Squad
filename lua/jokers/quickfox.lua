@@ -2,7 +2,10 @@ SMODS.Joker {
     atlas = 'joker',
     key = 'foxxo',
 	pos = { x = 4, y = 0 }, soul_pos = { x = 0, y = 0 },
-    set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.SO() end,
+    set_badges = function(self, card, badges) if (self.discovered) then
+		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Fop)
+		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.SO)
+	end end,
     discovered = true,
     rarity = 1,
     cost = 4,
@@ -22,8 +25,7 @@ SMODS.Joker {
             if context.scoring_name == most_played then --checks if the current hand is the most played
                 G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
                 --tarot spawn
-                --game crashes if self.config is replaced with card.ability, not sure why
-                if SMODS.pseudorandom_probability(card, 'tss_foxxo', 1, self.config.extra.tarot_odds) then 
+                if SMODS.pseudorandom_probability(card, 'tss_foxxo', 1, card.ability.extra.tarot_odds) then 
                     G.E_MANAGER:add_event(Event({
                         func = (function()
                             G.E_MANAGER:add_event(Event({

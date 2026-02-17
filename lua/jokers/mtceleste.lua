@@ -1,8 +1,10 @@
 SMODS.Joker{
     atlas = 'joker',
     key = 'mtceleste',
-    pos = { x = 1, y = 1 }, soul_pos = { x = 1, y = 2 },
-    set_badges = function(self, card, badges) badges[#badges+1] = tss_badges.LoL() end,
+    pos = { x = 8, y = 1 }, soul_pos = { x = 8, y = 2 },
+    set_badges = function(self, card, badges) if (self.discovered) then
+		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.LoL)
+	end end,
     discovered = false,
     unlocked = false,
     rarity = 3,
