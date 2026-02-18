@@ -3,8 +3,6 @@
 - Add Vouchers                                              [🔃]
     - Increases odds of seeing legendary jokers in the shop
 
-- Add Bankroll (cred)										[🔃]
-	- Gamble half ya cash, either win double the amount back or double blind requirement. recharges at start of each round
 - Add Helix													[🔃]
 	- eats joker to either side of itself at random, gains 0.1 mult per joker
 - Add MYKRA (uncommon)										[🔃]
@@ -13,8 +11,6 @@
 	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
 - Add Goblin Tactics										[🔃]
 	- For every $5 you have, this joker gains ×1 Mult. Lose $5 when triggered. If you run out of money, this card is destroyed
-- Add Hamuel's 518 Ham Shanks								[🔃]
-	- 2 in 4 chance to CRITICAL HIT when a card is triggered (×3 Mult, ×3 Chips)
 
 - Add Mt. Celeste											[🔃]
 	- randomly spawns strawberries across the screen, cookie clicker style:

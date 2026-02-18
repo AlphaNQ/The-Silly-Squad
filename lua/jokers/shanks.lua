@@ -5,8 +5,7 @@ SMODS.Joker{
     set_badges = function(self, card, badges) if (self.discovered) then
 		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Goob)
 	end end,
-    discovered = false,
-    unlocked = false,
+    discovered = true,
     rarity = 3,
     cost = 7,
     config = { extra = { odds = 4, xchips = 3, xmult = 3 } },
