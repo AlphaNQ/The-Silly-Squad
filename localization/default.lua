@@ -160,6 +160,7 @@ return {
                         "{C:crit}CRITICAL HIT{} when",
                         "a card is triggered"
                     }, {
+                        "{C:crit}CRITICAL HIT{}:",
                         "{X:chips,C:white}X#3#{} Chips | {X:mult,C:white}X#4#{} Mult"
                     }
                 },
