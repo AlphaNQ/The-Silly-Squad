@@ -198,3 +198,11 @@ before they stop being effective.
   - Gamble away half your total $$$, either:
     - Win double your money back.
     - double current blind requirement.
+
+## V 0.5.1
+
+- Changed Flame Noble and Heavenly Kitsune's trigger messages for cleaner code.
+
+- Added Hamuel's 518 Ham Shanks Joker card
+  - 1 in 4 chance to CRITICAL HIT scored cards.
+  - CRITICAL HIT: X3 Chips and X3 Mult.

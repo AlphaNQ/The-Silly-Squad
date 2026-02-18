@@ -9,7 +9,7 @@ Requirements:
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
 
 ## Current Content
-**7 New Jokers**:
+**8 New Jokers**:
 each joker represents us and our ocs as people along with a few inside jokes:
 - Flame Noble                 [Uncommon]
   - 1 in 5 chance to apply the Burned Seal to scored cards

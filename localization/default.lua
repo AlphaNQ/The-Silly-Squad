@@ -150,11 +150,18 @@ return {
                 }
             },
             j_tss_shanks = {
-                name = "Hamuel's 518 Ham Shanks",
+                name = {
+                    "Hamuel's 518",
+                    "Ham Shanks"
+                },
                 text = {
-                    "{C:green}#1# in #2#{} chance to",
-                    "{C:crit}CRITICAL HIT{} when a card is triggered",
-                    "{C:inactive}(gives {X:chips,C:white}X#3#{C:inactive} Chips and {X:mult,C:white}X#4#{C:inactive} Mult)"
+                    {
+                        "{C:green}#1# in #2#{} chance to",
+                        "{C:crit}CRITICAL HIT{} when",
+                        "a card is triggered"
+                    }, {
+                        "{X:chips,C:white}X#3#{} Chips | {X:mult,C:white}X#4#{} Mult"
+                    }
                 },
                 unlock = {
                     "ERR 404: Card Not Found",
@@ -251,6 +258,7 @@ return {
         dictionary = {
             k_burn = "Burned!",
             k_char = "Charred!",
+            k_crit = "CRITICAL HIT!",
             k_kiss = "*Mwah~!*",
             k_poof = "*Poof!*",
             tss_credits_label = "Credits",

@@ -11,9 +11,9 @@
     - Jokers with similar keywords to those you own are more likely to appear in the shop
 - Add Giggles												[🔃]
 	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
-- Add Goblin Tactics
+- Add Goblin Tactics										[🔃]
 	- For every $5 you have, this joker gains ×1 Mult. Lose $5 when triggered. If you run out of money, this card is destroyed
-- Add Hamuel's 518 Ham Shanks
+- Add Hamuel's 518 Ham Shanks								[🔃]
 	- 2 in 4 chance to CRITICAL HIT when a card is triggered (×3 Mult, ×3 Chips)
 
 - Add Mt. Celeste											[🔃]
@@ -196,6 +196,13 @@ SMODS.Atlas {
 	py = 17,
 	atlas_table = 'ANIMATION_ATLAS',
 	frames = 6
+}
+
+-- ======================SOUNDS======================
+
+SMODS.Sound {
+	key = "crit",
+	path = "crit.ogg"
 }
 
 -- ======================BADGES=====================

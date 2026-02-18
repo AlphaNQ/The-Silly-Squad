@@ -139,12 +139,18 @@ return {
                 }
             },
             j_tss_shanks = {
-                name = "Hamuel's 518 Jarrets de Jambon",
+                name = {
+                    "Hamuel's 518",
+                    "Jarrets de Jambon",
+                },
                 text = {
-                    "{C:green}#1# chance(s) sur #2#{} de",
-                    "{C:crit}COUP CRITIQUE{} quand une carte",
-                    "marque des points",
-                    "{C:inactive}(donne {X:chips,C:white}X#3#{C:inactive} Jetons et {X:mult,C:white}X#4#{C:inactive} Multi)"
+                    {
+                        "{C:green}#1# chance(s) sur #2#{} de",
+                        "{C:crit}COUP CRITIQUE{} quand une carte",
+                        "marque des points"
+                    }, {
+                        "{X:chips,C:white}X#3#{} Jetons | {X:mult,C:white}X#4#{} Multi"
+                    }
                 },
                 unlock = {
                     "ERR 404: Card Not Found",
@@ -237,6 +243,7 @@ return {
         dictionary = {
             k_burn = "Bruler!",
             k_char = "Braiser!",
+            k_crit = "COUP CRITIQUE!",
             k_kiss = "*Chu~!*",
             k_poof = "*Poof!*",
             tss_credits_label = "Crédits",
