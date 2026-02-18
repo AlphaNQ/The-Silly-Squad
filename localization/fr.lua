@@ -149,6 +149,7 @@ return {
                         "{C:crit}COUP CRITIQUE{} quand une carte",
                         "marque des points"
                     }, {
+                        "{C:crit}COUP CRITIQUE{}:",
                         "{X:chips,C:white}X#3#{} Jetons | {X:mult,C:white}X#4#{} Multi"
                     }
                 },
