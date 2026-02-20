@@ -206,3 +206,18 @@ before they stop being effective.
 - Added Hamuel's 518 Ham Shanks Joker card
   - 1 in 4 chance to CRITICAL HIT scored cards.
   - CRITICAL HIT: X3 Chips and X3 Mult.
+
+## V 0.5.2
+
+- Added Burning Love challenge:
+  - Deck can only contain cards with the Heart suit.
+
+- Added Bribery Joker card
+  - Pay $50 to instantly win blind.
+
+- Added Goblin Tactics Joker card
+  - X1 mult for every $5 you have.
+
+- Changed Burned seal code to be a bit cleaner and make more sense. dont worry, this changes nothing functionally.
+
+- Updated Burned seal Description.

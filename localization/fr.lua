@@ -20,9 +20,6 @@ return {
                     "pari une moitié de ton {C:money}$$${} {C:inactive}[#1#]{},",
                     "{C:green}gagner le double en tour{} {C:inactive}[#2#]{} ou",
                     "{C:red}doubler jetons nécessaire"
-                },
-                unlock = {
-                    "ERR 404: Card Not Found"
                 }
             },
             j_tss_bnop = {
@@ -32,6 +29,13 @@ return {
                     "{X:mult,C:white}X#1#{} Multi, gagnez {X:mult,C:white}X#2#{} Multi",
                     "toutes les {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
                     "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#5#{C:inactive})"
+                }
+            },
+            j_tss_bribery = {
+                name = "Corruption",
+                text = {
+                    "payer {C:money}$#1#{} pour",
+                    "passer blinde",
                 }
             },
             j_tss_bubble = {
@@ -55,7 +59,7 @@ return {
                 text = {
                     '{C:green}#1# chance(s) sur #2#{} de', 
                     "{C:burn,E:1}brûler{} les cartes lorsqu'elles",
-                    "marquent des points" --1 in 5
+                    "marquent des points"
                 }
             },
             j_tss_foxxo = {
@@ -79,15 +83,15 @@ return {
             j_tss_goblin = {
                 name = "Lutin Tactics",
                 text = {
-                    "Pour chaque {C:money}$#1#{}, Joker",
-                    "gagne {X:mult,C:white}X#2#{} Multi",
-                    "Perde {C:money}$#1#{} quand Joker déclenche",
-                    "Joker est {C:red}détruit{} si",
-                    "à court d'argent",
-                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#2#{C:inactive})"
-                },
-                unlock = {
-                    "ERR 404: Card Not Found",
+                    {
+                        "Multi {X:mult,C:white}X#1#{} pour",
+                        "chaque {C:money}$#2#{}",
+                        "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#3#{C:inactive})"
+                    }, {
+                        "Perde {C:money}$#2#{} quand déclenché",
+                        "Carte est {C:red}détruit{} si",
+                        "à court d'argent",
+                    }
                 }
             },
             j_tss_helix = {
@@ -152,9 +156,6 @@ return {
                         "{C:crit}COUP CRITIQUE{}:",
                         "{X:chips,C:white}X#3#{} Jetons | {X:mult,C:white}X#4#{} Multi"
                     }
-                },
-                unlock = {
-                    "ERR 404: Card Not Found",
                 }
             }
         },
@@ -198,10 +199,9 @@ return {
             tss_burned_seal = {
                 name = 'Brûler',
                 text = {
-                    '{C:blue}#1#{} Jetons | Multi {X:mult,C:white}X#2#{}', 
+                    '{C:blue}#1#{} Jetons | Multi {X:mult,C:white}X#2#{}',
                     "Détruite après qu'elle",
-                    'soit jouée {C:attention}#3#{} fois', 
-                    '{C:inactive}(#4# restante){}'  -- -50 jetons, X4 Multi, 10 uses, (use counter)
+                    'soit jouée {C:attention}#3#{} {C:inactive}[#4#]{} fois'
                 }
             },
             tss_favour_seal = {
@@ -239,7 +239,9 @@ return {
         achievement_descriptions = {},
         achievement_names = {},
         blind_states = {},
-        challenge_names = {},
+        challenge_names = {
+            c_tss_burning_love = "Amour Brûlant"
+        },
         collabs = {},
         dictionary = {
             k_burn = "Bruler!",
@@ -250,7 +252,8 @@ return {
             tss_credits_label = "Crédits",
             tss_credits_developer = "Développé Par: ",
             tss_credits_programminghelp = "Assistante Programmeur: ",
-            tss_credits_specialthanks = "Testeur de Jeux: "
+            tss_credits_specialthanks = "Testeur de Jeux: ",
+            tss_joker_bribe = "SOUDOYER"
         },
         high_scores = {},
         labels = {
@@ -265,6 +268,8 @@ return {
         suits_singular = {},
         tutorial = {},
         v_dictionary = {},
-        v_text = {},
+        v_text = {
+            ch_c_tss_hearts_only = { "Le jeu ne peut contenir {C:red}que{} des cartes de la couleur {C:hearts}Cœur{}." },
+        },
     }
 }

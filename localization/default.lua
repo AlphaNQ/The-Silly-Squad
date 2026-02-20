@@ -20,9 +20,6 @@ return {
                     "Gamble half your {C:money}$$${} {C:inactive}[#1#]{},",
                     "{C:green}win double back{} {C:inactive}[#2#]{} or",
                     "{C:red}double required chips"
-                },
-                unlock = {
-                    "ERR 404: Card Not Found"
                 }
             },
             j_tss_bnop = {
@@ -32,6 +29,13 @@ return {
                     "gains {X:mult,C:white}X#2#{} Mult for",
                     "every {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
                     "{C:inactive}(Currently {X:mult,C:white}X#5#{C:inactive} Mult)"
+                }
+            },
+            j_tss_bribery = {
+                name = "Bribery",
+                text = {
+                    "pay {C:money}$#1#{} to instantly",
+                    "win blind."
                 }
             },
             j_tss_bubble = {
@@ -84,15 +88,15 @@ return {
             j_tss_goblin = {
                 name = "Goblin Tactics",
                 text = {
-                    "For every {C:money}$#1#{} you have,",
-                    "Joker gains {X:mult,C:white}X#2#{} Mult",
-                    "Lose {C:money}$#1#{} when triggered",
-                    "Joker is {C:red}destroyed{} if you",
-                    "run out of money",
-                    "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
-                },
-                unlock = {
-                    "ERR 404: Card Not Found",
+                    {
+                        "{X:mult,C:white}X#1#{} Mult for",
+                        "every {C:money}$#2#{} you have",
+                        "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
+                    }, {
+                        "Lose {C:money}$#2#{} when triggered",
+                        "Card {C:red}destroyed{} if you",
+                        "run out of money",
+                    }
                 }
             },
             j_tss_helix = {
@@ -163,9 +167,6 @@ return {
                         "{C:crit}CRITICAL HIT{}:",
                         "{X:chips,C:white}X#3#{} Chips | {X:mult,C:white}X#4#{} Mult"
                     }
-                },
-                unlock = {
-                    "ERR 404: Card Not Found",
                 }
             }
         },
@@ -212,9 +213,9 @@ return {
             tss_burned_seal = {
                 name = 'Burned',
                 text = {
-                    '{C:blue}#1#{} Chips | {X:mult,C:white}X#2#{} Mult', 
-                    'Destroys after {C:attention}#3#{} uses', 
-                    '{C:inactive}(#4# Use(s) left){}'  -- -50 chips, X4 Mult, 10 uses, (use counter)
+                    "{C:blue}#1#{} Chips | {X:mult,C:white}X#2#{} Mult",
+                    "Destroys after",
+                    "{C:attention}#3#{} {C:inactive}[#4#]{} uses"
                 }
             },
             tss_favour_seal = {
@@ -254,7 +255,9 @@ return {
         achievement_descriptions = {},
         achievement_names = {},
         blind_states = {},
-        challenge_names = {},
+        challenge_names = {
+            c_tss_burning_love = "Burning Love"
+        },
         collabs = {},
         dictionary = {
             k_burn = "Burned!",
@@ -265,7 +268,8 @@ return {
             tss_credits_label = "Credits",
             tss_credits_developer = "Developed By: ",
             tss_credits_programminghelp = "Assistant Programmer: ",
-            tss_credits_specialthanks = "Playtesters: "
+            tss_credits_specialthanks = "Playtesters: ",
+            tss_joker_bribe = "BRIBE"
         },
         high_scores = {},
         labels = {
@@ -280,6 +284,8 @@ return {
         suits_singular = {},
         tutorial = {},
         v_dictionary = {},
-        v_text = {},
+        v_text = {
+            ch_c_tss_hearts_only = { "Deck can {C:red}only{} contain cards with the {C:hearts}Heart{} suit." },
+        },
     }
 }

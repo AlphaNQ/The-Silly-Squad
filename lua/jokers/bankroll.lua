@@ -19,14 +19,14 @@ local bankroll = SMODS.Joker{
             }
         }
     end,
-}
 
-bankroll.calculate = function(self, card, context)
-    if context.setting_blind then
-        card.ability.extra.used = false
-        return { message = "Slots reset!" }
+    calculate = function(self, card, context)
+        if context.setting_blind then
+            card.ability.extra.used = false
+            return { message = "Slots reset!" }
+        end
     end
-end
+}
 
 bankroll.slime_active = {
 	calculate = function(self, card)

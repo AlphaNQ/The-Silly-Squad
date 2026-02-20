@@ -1,6 +1,6 @@
 --[[TO DO LIST
 
-- Add Vouchers                                              [🔃]
+- Add Vouchers                                              [❌]
     - Increases odds of seeing legendary jokers in the shop
 
 - Add Helix													[🔃]
@@ -11,6 +11,17 @@
 	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
 - Add Goblin Tactics										[🔃]
 	- For every $5 you have, this joker gains ×1 Mult. Lose $5 when triggered. If you run out of money, this card is destroyed
+- Add Cat
+	- idk yet
+- Add Toast
+	- idk yet
+- Add Cato
+	- idk yet
+- Add Pedro
+	- X1 mult per blind played in a row. resets if blind is skipped.
+- Add Hamburger (overcooked)
+	- Each round, burger gets cooked by a random amount between 1 and 3. after 15 points, grants X3 mult
+	- if it reaches 25, becomes burnt. eternal sticker, does nothing.
 
 - Add Mt. Celeste											[🔃]
 	- randomly spawns strawberries across the screen, cookie clicker style:
@@ -19,13 +30,15 @@
 		- Golden: applies gold seal to random card
 		- Winged Golden: gives +2 hands
 		- Moonberry: Adds negative to a random joker
-- Add Bribery
-	- pay $50 to instantly win blind, $100 to win run
 
 - Rebalance as necessary
+
 ----   NOTES   ----
+
 - Add seal protection to Flame Noble and Heavenly Kitsune.
+
 ---- BUG FIXES ----
+
 - Nothing to do!! :D
 ]]
 
@@ -77,6 +90,7 @@ local files = {
 	"misc",
 	"strawbs",
 	"blinds",
+	"challenge",
 	--"config",					--currently commented out as its functions do not work atm. working on a fix.
 	"http"
 }
@@ -94,6 +108,7 @@ local jokers = {
 	"shanks",
 	"giggles",
 	"helix",
+	"bribery",
 	"mtceleste",
     "bubblegum"
 }
@@ -194,12 +209,24 @@ SMODS.Atlas {
 	frames = 6
 }
 
--- ======================SOUNDS======================
+-- =====================SOUNDS======================
 
 SMODS.Sound {
 	key = "crit",
 	path = "crit.ogg"
 }
+
+-- ======================HOOKS======================
+
+local smods_add_to_pool_ref = SMODS.add_to_pool
+function SMODS.add_to_pool(prototype_obj, args)
+    if G.GAME.modifiers.tss_hearts_only then
+        if SMODS.Suits[prototype_obj.key] and prototype_obj.card_key ~= 'H' then
+            return false
+        end
+    end
+    return smods_add_to_pool_ref(prototype_obj, args)
+end
 
 -- ======================BADGES=====================
 
