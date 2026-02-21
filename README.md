@@ -9,7 +9,7 @@ Requirements:
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
 
 ## Current Content
-**8 New Jokers**:
+**11 New Jokers**:
 each joker represents us and our ocs as people along with a few inside jokes:
 - Flame Noble                 [Uncommon]
   - 1 in 5 chance to apply the Burned Seal to scored cards
@@ -35,19 +35,15 @@ each joker represents us and our ocs as people along with a few inside jokes:
 - Kit's Favour
   - Cards retrigger 5 times
 
-**2 New Vouchers**: with such silly cards, it'd be a missed opportunity if you couldnt get them naturally, so let's balance that a bit :3
-- Cosmic
-  - Legendary Jokers spawn 2x more frequently
-- Void
-  - Legendary Jokers spawn 4x more frequently
-
-NOTE: These Vouchers will not appear if you do not have the [ellejokers. mod](https://github.com/ellestuff/ellejokers) installed.
-
 **A New Boss Blind**: made as a counter to some more... *broken* synergies
 - The "F" Student
   - All Ace cards are debuffed
 
 - **And more down the line :3**
+
+**A new Challenge**:
+- Burning Love
+  - Deck can only contain cards with the Heart suit
 
 ## FAQ:
 *"Why is the earliest version of this mod V 0.3.1?"*

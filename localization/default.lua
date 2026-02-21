@@ -231,25 +231,7 @@ return {
         Stake = {},
         Tag = {},
         Tarot = {},
-        Voucher = {
-            v_tss_cosmic = {
-                name = "Cosmic",
-                text = {
-                    "{C:legendary,E:1}Legendary{} Jokers appear",
-                    "{X:mult,C:white}#1#X{} more often",
-                }
-            },
-            v_tss_void = {
-                name = "Void",
-                text = {
-                    "{C:legendary,E:1}Legendary{} Jokers appear",
-                    "{X:mult,C:white}#1#X{} more often",
-                },
-                unlock = {
-                    "Unlock 1 {C:legendary,E:1}Legendary{} Joker"
-                }
-            }
-        }
+        Voucher = {}
     },
     misc = {
         achievement_descriptions = {},
@@ -266,9 +248,9 @@ return {
             k_kiss = "*Mwah~!*",
             k_poof = "*Poof!*",
             tss_credits_label = "Credits",
-            tss_credits_developer = "Developed By: ",
-            tss_credits_programminghelp = "Assistant Programmer: ",
-            tss_credits_specialthanks = "Playtesters: ",
+            tss_credits_developer = "Developed By:",
+            tss_credits_assistant = "Assistant Programmer:",
+            tss_credits_specialthanks = "Special Thanks:",
             tss_joker_bribe = "BRIBE"
         },
         high_scores = {},

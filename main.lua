@@ -46,31 +46,68 @@
 
 -- Credits Tab --
 
+local function display_credits_card(key)
+	local card = Card(G.ROOM.T.x,G.ROOM.T.y,G.CARD_W*0.8,G.CARD_H*0.8,nil,G.P_CENTERS[key], { bypass_discovery_center = true, bypass_discovery_ui = true })
+	card.no_ui = true
+	card.states.drag.can = false
+	return card
+end
+
 SMODS.current_mod.extra_tabs = function()
 	return {
 		label = localize("tss_credits_label"),
 		tab_definition_function = function()
-			return {
-				n = G.UIT.ROOT, config = { r = 0.5, align = "cm", padding = 0.2, colour = G.C.BLACK }, nodes = {
-					{ n = G.UIT.R, config = { padding = 0, align = "cl" }, nodes = { 
-						{ n = G.UIT.T, config = { text = localize("tss_credits_developer"), shadow = true, scale = 0.6 } },
-						{ n = G.UIT.T, config = { text = "Alpha N. Q.", shadow = true, scale = 0.6, colour = G.C.BLUE } } 
-					} }, 
-					{ n = G.UIT.R, config = { padding = 0, align = "cl", scale = 0.5 }, nodes = {
-						{ n = G.UIT.T, config = { text = localize("tss_credits_programminghelp"), shadow = true, scale = 0.45 } },
-						{ n = G.UIT.T, config = { text = "slimestuff.", shadow = true, scale = 0.45, colour = G.C.BLUE } } 
-					} },
-					{ n = G.UIT.R, config = { padding = 0, align = "cl", scale = 0.1 }, nodes = {
-						{ n = G.UIT.T, config = { text = localize("tss_credits_specialthanks"), shadow = true, scale = 0.45 } },
-						{ n = G.UIT.T, config = { text = "Slyvie, xCred_64", shadow = true, scale = 0.45, colour = G.C.BLUE } } 
+			return { n = G.UIT.ROOT, config = { r = 0.5, align = "cm", padding = 0.2, colour = G.C.BLACK }, nodes = {
+				{ n = G.UIT.C, config = { align = "cm", padding = 0.2, colour = G.C.L_BLACK }, nodes = {
+					{ n = G.UIT.R, config = { r = 0.5, align = "cm" }, nodes = {
+						{ n = G.UIT.C, config = { align = "cm", padding = 0.2, minw = 5 }, nodes = {
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = localize("tss_credits_assistant"), shadow = true, scale = 0.5 } }
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = "slimestuff.", shadow = true, scale = 0.5, colour = G.C.BLUE } }
+							} },
+							--[[{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.O, config = { object = display_credits_card('j_tss_mtceleste') } }
+							} }]]
+						} },
+						{ n = G.UIT.C, config = { align = "cm", padding = 0.2, minw = 5 }, nodes = {
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = localize("tss_credits_developer"), shadow = true, scale = 0.5 } }
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = "Alpha N. Q.", shadow = true, scale = 0.5, colour = G.C.BLUE } }
+							} },
+							--[[{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.O, config = { object = display_credits_card('j_tss_mtceleste') } }
+							} }]]
+						} },
+						{ n = G.UIT.C, config = { align = "cm", padding = 0.2, minw = 5 }, nodes = {
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = localize("tss_credits_specialthanks"), shadow = true, scale = 0.5 } }
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = "NineTailedMenace", shadow = true, scale = 0.4, colour = G.C.BLUE } }
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = "xCred_64", shadow = true, scale = 0.4, colour = G.C.BLUE } }
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = { text = "Prodabic", shadow = true, scale = 0.4, colour = G.C.BLUE } }
+							} },
+							--[[{ n = G.UIT.R, config = { maxw = 3, align = "cm" }, nodes = {
+								{ n = G.UIT.O, config = { object = display_credits_card('j_tss_mtceleste') } },
+								{ n = G.UIT.O, config = { object = display_credits_card('j_tss_mtceleste') } }
+							} }]]
+						} }
 					} },
 					{ n = G.UIT.R, config = { padding = 0.2, align = "cm" }, nodes = {
 						UIBox_button{ minw = 3.85, colour = HEX("009DFF"), button = "alpha_bsky", label = {"BlueSky"} },
 						UIBox_button{ minw = 3.85, colour = HEX("FF0000"), button = "alpha_youtube", label = {"YouTube"} },
 						UIBox_button{ minw = 3.85, colour = HEX("334096"), button = "alpha_github", label = {"Github"} }
-					} } 
-				}
-			}
+					} }	
+				} }
+			} }
 		end
 	}
 end
@@ -86,7 +123,6 @@ function G.FUNCS.alpha_github(e) love.system.openURL("https://github.com/AlphaNQ
 -- File Indexes --
 
 local files = {
-    "vouchers",
 	"misc",
 	"strawbs",
 	"blinds",
@@ -153,13 +189,6 @@ SMODS.Atlas {
 SMODS.Atlas {
     key = "effect",
     path = "effects.png",
-    px = 71,
-    py = 95,
-}
-
-SMODS.Atlas {
-    key = "voucher",
-    path = "vouchers.png",
     px = 71,
     py = 95,
 }

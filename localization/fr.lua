@@ -217,23 +217,7 @@ return {
         Stake = {},
         Tag = {},
         Tarot = {},
-        Voucher = {
-            v_tss_cosmic = {
-                name = "Cosmique",
-                text = {
-                    "{C:legendary,E:1}legendary{} Jokers appear",
-                    "{X:mult,C:white}#1#X{} more often",
-                }
-            },
-            v_tss_void = {
-                name = "Vide",
-                text = {
-                    "{C:legendary,E:1}legendary{} Jokers appear",
-                    "{X:mult,C:white}#1#X{} more often",
-                }
-            },
-        },
-        
+        Voucher = {}
     },
     misc = {
         achievement_descriptions = {},
@@ -250,9 +234,9 @@ return {
             k_kiss = "*Chu~!*",
             k_poof = "*Poof!*",
             tss_credits_label = "Crédits",
-            tss_credits_developer = "Développé Par: ",
-            tss_credits_programminghelp = "Assistante Programmeur: ",
-            tss_credits_specialthanks = "Testeur de Jeux: ",
+            tss_credits_developer = "Développé Par:",
+            tss_credits_assistant = "Assistante Programmeur:",
+            tss_credits_specialthanks = "remerciements particuliers:",
             tss_joker_bribe = "SOUDOYER"
         },
         high_scores = {},

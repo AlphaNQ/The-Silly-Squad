@@ -221,3 +221,10 @@ before they stop being effective.
 - Changed Burned seal code to be a bit cleaner and make more sense. dont worry, this changes nothing functionally.
 
 - Updated Burned seal Description.
+
+## V 0.6.0 /// Love of the Grind
+
+- Updated card atlases.
+
+- Removed custom Vouchers. dont know how to code it and it's not really a great idea looking back. 
+they never did anything anyway tbf.
