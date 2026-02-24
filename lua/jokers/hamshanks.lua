@@ -1,6 +1,6 @@
 SMODS.Joker{
     atlas = 'joker',
-    key = 'shanks',
+    key = 'ham_shanks',
     pos = { x = 2, y = 1 },
     set_badges = function(self, card, badges) if (self.discovered) then
 		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Goob)

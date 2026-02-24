@@ -1,16 +1,11 @@
 --[[TO DO LIST
 
-- Add Vouchers                                              [❌]
-    - Increases odds of seeing legendary jokers in the shop
-
 - Add Helix													[🔃]
 	- eats joker to either side of itself at random, gains 0.1 mult per joker
 - Add MYKRA (uncommon)										[🔃]
-    - Jokers with similar keywords to those you own are more likely to appear in the shop
-- Add Giggles												[🔃]
-	- At start of round, will eat any food based joker to its right and will add double the sell value to mult
-- Add Goblin Tactics										[🔃]
-	- For every $5 you have, this joker gains ×1 Mult. Lose $5 when triggered. If you run out of money, this card is destroyed
+    - Jokers you own will be more likely to appear in the shop and be Negative.
+- Add Funky
+	- 1 in 20 chance to give x810 mult, else it's x0.8
 - Add Cat
 	- idk yet
 - Add Toast
@@ -19,6 +14,8 @@
 	- idk yet
 - Add Pedro
 	- X1 mult per blind played in a row. resets if blind is skipped.
+- Add Totally Balanced
+	- 1 in 5 chance to get heads, 8 heads in a row wins the run. can pay to upgrade odds,resets after each played hand.
 - Add Hamburger (overcooked)
 	- Each round, burger gets cooked by a random amount between 1 and 3. after 15 points, grants X3 mult
 	- if it reaches 25, becomes burnt. eternal sticker, does nothing.
@@ -39,7 +36,7 @@
 
 ---- BUG FIXES ----
 
-- Nothing to do!! :D
+- only hearts rule does not affect the loot pool from spectral cards
 ]]
 
 -- ====================META=DATA====================
@@ -76,7 +73,7 @@ SMODS.current_mod.extra_tabs = function()
 								{ n = G.UIT.T, config = { text = localize("tss_credits_developer"), shadow = true, scale = 0.5 } }
 							} },
 							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
-								{ n = G.UIT.T, config = { text = "Alpha N. Q.", shadow = true, scale = 0.5, colour = G.C.BLUE } }
+								{ n = G.UIT.T, config = { text = "Amber N. Q.", shadow = true, scale = 0.5, colour = G.C.BLUE } }
 							} },
 							--[[{ n = G.UIT.R, config = { align = "cm" }, nodes = {
 								{ n = G.UIT.O, config = { object = display_credits_card('j_tss_mtceleste') } }
@@ -114,9 +111,9 @@ end
 
 -- tab buttons --
 
-function G.FUNCS.alpha_bsky(e) love.system.openURL("https://bsky.app/profile/alphaanimates.bsky.social") end
+function G.FUNCS.alpha_bsky(e) love.system.openURL("https://bsky.app/profile/amberanimatez.bsky.social") end
 
-function G.FUNCS.alpha_youtube(e) love.system.openURL("https://www.youtube.com/@AlphaAnimatez") end
+function G.FUNCS.alpha_youtube(e) love.system.openURL("https://www.youtube.com/@AmberAnimatez") end
 
 function G.FUNCS.alpha_github(e) love.system.openURL("https://github.com/AlphaNQ") end
 
@@ -140,13 +137,14 @@ local jokers = {
 	"bankroll",
 	"ferretlady",
 	"mykra",
-	"goblin",
-	"shanks",
-	"giggles",
+	"goblintactics",
+	"hamshanks",
 	"helix",
+	"giggles",
+	--"funky",
 	"bribery",
 	"mtceleste",
-    "bubblegum"
+    "starla"
 }
 
 -- File Loader --

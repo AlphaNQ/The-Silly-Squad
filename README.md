@@ -9,14 +9,14 @@ Requirements:
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
 
 ## Current Content
-**11 New Jokers**:
+**13 New Jokers**:
 each joker represents us and our ocs as people along with a few inside jokes:
 - Flame Noble                 [Uncommon]
   - 1 in 5 chance to apply the Burned Seal to scored cards
 - Heavenly Kitsune            [Rare]
   - 1 in 8 chance to turn scored cards into Aces
   - 1 in 16 chance to give scored Aces the Kit's Favour
-- Arcane-nine                 [Rare]
+- Arca-nine                   [Uncommon]
   - Scored Aces give X2 Mult
   - Gains X0.5 Mult for every 10 Aces
 - Quick Fox                   [Common]

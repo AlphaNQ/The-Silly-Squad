@@ -13,6 +13,15 @@ return {
         Edition = {},
         Enhanced = {},
         Joker = {
+            j_tss_arcanine = {
+                name = "Cannine Occulte",
+                text = {
+                    "Les Aces acquise donne",
+                    "{X:mult,C:white}X#1#{} Multi, gagnez {X:mult,C:white}X#2#{} Multi",
+                    "toutes les {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
+                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#5#{C:inactive})"
+                }
+            },
             j_tss_bankroll = {
                 name = "Financer",
                 text = {
@@ -22,15 +31,6 @@ return {
                     "{C:red}doubler jetons nécessaire"
                 }
             },
-            j_tss_bnop = {
-                name = "Cannine Occulte",
-                text = {
-                    "Les Aces acquise donne",
-                    "{X:mult,C:white}X#1#{} Multi, gagnez {X:mult,C:white}X#2#{} Multi",
-                    "toutes les {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
-                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#5#{C:inactive})"
-                }
-            },
             j_tss_bribery = {
                 name = "Corruption",
                 text = {
@@ -38,23 +38,14 @@ return {
                     "passer blinde",
                 }
             },
-            j_tss_bubble = {
-                name = "gomme à mâcher",
-                text = {
-                    "Multi {X:mult,C:white}X#1#{} par {C:attention}abonné{}",
-					"sur le compte {C:blue}BlueSky{} d'{C:burn}Alpha{}",
-                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#2#{C:inactive})",
-					caption.."*te fait exploser dans me rêves*"
-                }
-            },
-            j_tss_ferret = {
+            j_tss_ferret_lady = {
                 name = "Dame Furet",
                 text = {
                     "Multi {X:mult,C:white}X#1#{} si la main",
                     "jouée contient une {C:attention}Couleur{}"
                 }
             },
-            j_tss_flame = {
+            j_tss_flame_noble = {
                 name = "Flame Royale",
                 text = {
                     '{C:green}#1# chance(s) sur #2#{} de', 
@@ -62,25 +53,28 @@ return {
                     "marquent des points"
                 }
             },
-            j_tss_foxxo = {
-                name = "Renard Rapide",
+            j_tss_funky = {
+                name = "Funky",
                 text = {
-                    'Crée une carte {C:tarot}Tarot{} {E:1}"random"{}',
-                    "quand {C:attention}la main la moins aquise{} est jouée",
-                    "{C:inactive}(Selon la place disponible){}",
-                    caption.."Le plus sournois du royaume des animaux ;3c"
-                }
-            },
-            j_tss_giggles = {
-                name = "Giggles",
-                text = {
-                    ""
+                    "{C:green}#1# chance(s) sur #2#{} de",
+                    "Multi. {X:mult,C:white}X#3#{}, sinon",
+                    "Multi. {X:mult,C:white}X#4#{}"
                 },
                 unlock = {
                     "ERR 404: Carte introuvable",
                 }
             },
-            j_tss_goblin = {
+            j_tss_giggles = {
+                name = "Giggles",
+                text = {
+                    "Lorsque la {C:attention}Blinde{} est sélectionnée,",
+                    "mange les Jokers à base de nourriture", 
+                    "à sa droite et ajoute le {C:attention}double",
+                    "de sa valeur de vente à ce {X:mult,C:white}XMulti.{}",
+                    "{C:inactive}(Actuellement Multi. {X:mult,C:white}X#1#{C:inactive})"
+                }
+            },  
+            j_tss_goblin_tactics = {
                 name = "Lutin Tactics",
                 text = {
                     {
@@ -94,22 +88,39 @@ return {
                     }
                 }
             },
-            j_tss_helix = {
-                name = "Helix",
-                text = {
-                    ""
+            j_tss_ham_shanks = {
+                name = {
+                    "Hamuel's 518",
+                    "Jarrets de Jambon",
                 },
-                unlock = {
-                    "ERR 404: Carte introuvable",
+                text = {
+                    {
+                        "{C:green}#1# chance(s) sur #2#{} de",
+                        "{C:crit}COUP CRITIQUE{} quand une carte",
+                        "marque des points"
+                    }, {
+                        "{C:crit}COUP CRITIQUE{}:",
+                        "{X:chips,C:white}X#3#{} Jetons | {X:mult,C:white}X#4#{} Multi"
+                    }
                 }
             },
-            j_tss_kitsune = {
+            j_tss_heavenly_kitsune = {
                 name = "Goupil des Cieux",
                 text = {
                     "{C:green}#1# chance(s) sur #2#{} de changer",
                     "les cartes acquise en Ace", 
                     "{C:green}#3# chance(s) sur #4#{} de donner", 
                     "les Aces acquise la {C:purple,E:1}Faveur de Faux{}" --1 in 8, 1 in 16
+                }
+            },
+            j_tss_helix = {
+                name = "Helix",
+                text = {
+                    "Lorsque la {C:attention}Blinde{} est sélectionnée,",
+                    "mange les Jokers à base de nourriture", 
+                    "à sa droite et ajoute {C:mult}+#1#{} Multi",
+                    "pour chaque Joker mangé.",
+                    "{C:inactive}(Actuellement Multi. {C:mult}+#2#{C:inactive})"
                 }
             },
             j_tss_mtceleste = {
@@ -126,7 +137,7 @@ return {
                 }
             },
             j_tss_mykra = {
-                name = "MYKRA",
+                name = "The Better m",
                 text = {
                     ""
                 },
@@ -134,28 +145,31 @@ return {
                     "ERR 404: Carte introuvable",
                 }
             },
+            j_tss_quick_fox = {
+                name = "Renard Rapide",
+                text = {
+                    'Crée une carte {C:tarot}Tarot{} {E:1}"random"{}',
+                    "quand {C:attention}la main la moins aquise{} est jouée",
+                    "{C:inactive}(Selon la place disponible){}",
+                    caption.."Le plus sournois du royaume des animaux ;3c"
+                }
+            },
             j_tss_roulette = {
                 name = "Roulette",
                 text = {
                     "Chance aléatoire d'agir",
                     "comme {C:red}Flame Royale{}, {C:planet}Goupil des Cieux{},",
-                    "{C:purple}Cannine Occulte{}, ou {C:attention}Renard Rapide{}"
+                    "{C:purple}Cannine Occulte{}, ou {C:attention}Renard Rapide{}",
+                    "{C:inactive}(Actuellement: {C:blue}#1#{C:inactive})"
                 }
             },
-            j_tss_shanks = {
-                name = {
-                    "Hamuel's 518",
-                    "Jarrets de Jambon",
-                },
+            j_tss_starla = {
+                name = "Starla",
                 text = {
-                    {
-                        "{C:green}#1# chance(s) sur #2#{} de",
-                        "{C:crit}COUP CRITIQUE{} quand une carte",
-                        "marque des points"
-                    }, {
-                        "{C:crit}COUP CRITIQUE{}:",
-                        "{X:chips,C:white}X#3#{} Jetons | {X:mult,C:white}X#4#{} Multi"
-                    }
+                    "Multi {X:mult,C:white}X#1#{} par {C:attention}abonné{}",
+					"sur le compte {C:blue}BlueSky{} d'{C:burn}Ambre{}",
+                    "{C:inactive}(Actuellement: Multi {X:mult,C:white}X#2#{C:inactive})",
+					caption.."*te fait exploser dans me rêves*"
                 }
             }
         },

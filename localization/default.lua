@@ -13,6 +13,15 @@ return {
         Edition = {},
         Enhanced = {},
         Joker = {
+            j_tss_arcanine = {
+                name = "Arca-nine",
+                text = {
+                    "Scored Aces give {X:mult,C:white}X#1#{} Mult,",
+                    "gains {X:mult,C:white}X#2#{} Mult for",
+                    "every {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
+                    "{C:inactive}(Currently {X:mult,C:white}X#5#{C:inactive} Mult)"
+                }
+            },
             j_tss_bankroll = {
                 name = "Bankroll",
                 text = {
@@ -22,15 +31,6 @@ return {
                     "{C:red}double required chips"
                 }
             },
-            j_tss_bnop = {
-                name = "Arcane-nine",
-                text = {
-                    "Scored Aces give {X:mult,C:white}X#1#{} Mult,",
-                    "gains {X:mult,C:white}X#2#{} Mult for",
-                    "every {C:attention}#3#{} {C:inactive}[#4#]{} Aces",
-                    "{C:inactive}(Currently {X:mult,C:white}X#5#{C:inactive} Mult)"
-                }
-            },
             j_tss_bribery = {
                 name = "Bribery",
                 text = {
@@ -38,54 +38,42 @@ return {
                     "win blind."
                 }
             },
-            j_tss_bubble = {
-                name = "Bubblegum",
-                text = {
-                    "{X:mult,C:white}X#1#{} Mult per {C:attention}Follower",
-					"on {C:burn}Alpha{}'s {C:blue}BlueSky{} account",
-					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
-					caption.."*blows you up with my mind*",
-                },
-                unlock = {
-					"{E:1,s:1.3}?????"
-				}
-            },
-            j_tss_ferret = {
+            j_tss_ferret_lady = {
                 name = "Ferret Lady",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if played",
                     "hand is a {C:attention}Flush{} type"
                 }
             },
-            j_tss_flame = {
+            j_tss_flame_noble = {
                 name = "Flame Noble",
                 text = {
-                    '{C:green}#1# in #2#{} chance to', 
-                    '{C:burn,E:1}burn{} cards when scored' --1 in 5
+                    "{C:green}#1# in #2#{} chance to", 
+                    "{C:burn,E:1}burn{} cards when scored"
                 }
             },
-            j_tss_foxxo = {
-                name = "Quick Fox",
+            j_tss_funky = {
+                name = "Funky",
                 text = {
-                    'Creates a {E:1}"random"{} {C:tarot}Tarot{} card',
-                    "when {C:attention}most scored hand{} is played",
-                    "{C:inactive}(Must have room){}",
-                    caption.."The sneakiest in the animal kingdom ;3c"
-                }
-            },
-            j_tss_giggles = {
-                name = "Giggles",
-                text = {
-                    "At the start of the round, eats",
-                    "any food based Joker to its", 
-                    "right and adds double the sell",
-                    "value to mult"
+                    "{C:green}#1# in #2#{} chance to",
+                    "give {X:mult,C:white}X#3#{} Mult, or else",
+                    "gives {X:mult,C:white}X#4#{} Mult"
                 },
                 unlock = {
                     "ERR 404: Card Not Found",
                 }
             },
-            j_tss_goblin = {
+            j_tss_giggles = {
+                name = "Giggles",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "eat food-based Joker", 
+                    "to the right and add {C:attention}double{}",
+                    "its sell value to {X:mult,C:white}XMult{}",
+                    "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+                }
+            },
+            j_tss_goblin_tactics = {
                 name = "Goblin Tactics",
                 text = {
                     {
@@ -99,24 +87,38 @@ return {
                     }
                 }
             },
-            j_tss_helix = {
-                name = "Helix",
-                text = {
-                    "Eats a random Joker to either",
-                    "side of itself and gains 0.1",
-                    "mult per Joker eaten"
+            j_tss_ham_shanks = {
+                name = {
+                    "Hamuel's 518",
+                    "Ham Shanks"
                 },
-                unlock = {
-                    "ERR 404: Card Not Found",
+                text = {
+                    {
+                        "{C:green}#1# in #2#{} chance to",
+                        "{C:crit}CRITICAL HIT{} when",
+                        "a card is triggered"
+                    }, {
+                        "{C:crit}CRITICAL HIT{}:",
+                        "{X:chips,C:white}X#3#{} Chips | {X:mult,C:white}X#4#{} Mult"
+                    }
                 }
             },
-            j_tss_kitsune = {
+            j_tss_heavenly_kitsune = {
                 name = "Heavenly Kitsune",
                 text = {
                     "{C:green}#1# in #2#{} chance to turn", 
                     "scored cards into an Ace", 
                     "{C:green}#3# in #4#{} chance to give", 
                     "scored Aces the {C:purple,E:1}Kit's Favor{}" --1 in 8, 1 in 16
+                }
+            },
+            j_tss_helix = {
+                name = "Helix",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "destroy Joker to the right", 
+                    "and add {C:mult}+#1#{} Mult per Joker.",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_tss_mtceleste = {
@@ -133,7 +135,7 @@ return {
                 }
             },
             j_tss_mykra = {
-                name = "MYKRA",
+                name = "The Better m",
                 text = {
                     "Jokers with similar keywords",
                     "to those you own are more likely",
@@ -143,31 +145,36 @@ return {
                     "ERR 404: Card Not Found",
                 }
             },
+            j_tss_quick_fox = {
+                name = "Quick Fox",
+                text = {
+                    'Creates a {E:1}"random"{} {C:tarot}Tarot{} card',
+                    "when {C:attention}most scored hand{} is played",
+                    "{C:inactive}(Must have room){}",
+                    caption.."The sneakiest in the animal kingdom ;3c"
+                }
+            },
             j_tss_roulette = {
                 name = "Roulette",
                 text = {
                     "At {C:attention}end of round{},",
                     "randomly switches between",
                     "{C:red}Flame Noble{}, {C:planet}Heavenly Kitsune{},",
-                    "{C:purple}Arcane-nine{}, and {C:attention}Quick Fox{}",
+                    "{C:purple}Arca-nine{}, and {C:attention}Quick Fox{}",
                     "{C:inactive}(Currently: {C:blue}#1#{C:inactive})"
                 }
             },
-            j_tss_shanks = {
-                name = {
-                    "Hamuel's 518",
-                    "Ham Shanks"
-                },
+            j_tss_starla = {
+                name = "Starla",
                 text = {
-                    {
-                        "{C:green}#1# in #2#{} chance to",
-                        "{C:crit}CRITICAL HIT{} when",
-                        "a card is triggered"
-                    }, {
-                        "{C:crit}CRITICAL HIT{}:",
-                        "{X:chips,C:white}X#3#{} Chips | {X:mult,C:white}X#4#{} Mult"
-                    }
-                }
+                    "{X:mult,C:white}X#1#{} Mult per {C:attention}Follower",
+					"on {C:burn}Amber{}'s {C:blue}BlueSky{} account",
+					"{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+					caption.."*blows you up with my mind*",
+                },
+                unlock = {
+					"{E:1,s:1.3}?????"
+				}
             }
         },
         Other = {

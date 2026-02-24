@@ -1,12 +1,13 @@
 SMODS.Joker {
     atlas = 'joker',
-    key = 'bnop',
+    key = 'arcanine',
 	pos = { x = 3, y = 0 }, soul_pos = { x = 0, y = 0 },
     set_badges = function(self, card, badges) if (self.discovered) then
 		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Bun)
 		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.SO)
 	end end,
     discovered = true,
+    blueprint_compat = false,
     rarity = 2,
     cost = 6,
     config = { extra = { xmult = 2, xmult_mod = 0.5, ace_count = 10} },

@@ -6,6 +6,7 @@ local bankroll = SMODS.Joker{
 		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.Goob)
 	end end,
     discovered = true,
+    blueprint_compat = true,
     rarity = 2,
     cost = 0,
     config = { extra = { odds = 10, xblind = 2, used = false } },

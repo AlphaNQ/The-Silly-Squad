@@ -228,3 +228,17 @@ before they stop being effective.
 
 - Removed custom Vouchers. dont know how to code it and it's not really a great idea looking back. 
 they never did anything anyway tbf.
+
+## V 0.7.0 /// Gluttony and Greed
+
+- Added Giggles Joker card
+  - eats any food-based jokers to its right when blind is selected, and adds double the sell value to Xmult.
+
+- Added Helix Joker Card
+  - destroys any jokers to its right when blind is selected, and adds +0.5 mult for each Joker.
+
+- Changed Blueprint compatibility for some jokers. mostly because they realistically wouldnt work.
+
+- Updated Joker keys for easier access and understanding.
+
+- Updated Bankroll visuals. Overtime all cards will have the same treatment.

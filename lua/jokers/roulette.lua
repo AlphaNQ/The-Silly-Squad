@@ -1,7 +1,7 @@
 -- Since we're doing this in 2 places, it's better to make a local function for this
 local function set_roulette_card(card)
     -- Gets the random copy thingy
-    local rand = pseudorandom_element({'j_tss_flame','j_tss_kitsune','j_tss_bnop','j_tss_foxxo'}, "tss_roulette")
+    local rand = pseudorandom_element({'j_tss_flame_noble','j_tss_heavenly_kitsune','j_tss_arcanine','j_tss_quick_fox'}, "tss_roulette")
     
     -- Sets the joker's variables to that of the target joker
     card.ability.extra = G.P_CENTERS[rand].config.extra
@@ -20,6 +20,7 @@ SMODS.Joker{
 		badges[#badges+1] = slimeutils.table_create_badge(tss_badges.SO)
 	end end,
     discovered = true,
+    blueprint_compat = false,
     rarity = 3,
     cost = 8,
     config = { rand = 'j_tss_flame' },

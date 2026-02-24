@@ -6,13 +6,7 @@ SMODS.Seal {
     pos = { x = 0, y = 0 },
     discovered = true,
     badge_colour = HEX("660000"),
-    config = {
-        extra = {
-            uses = 5,
-            chips = -10,
-            xmult = 4
-        } 
-    },
+    config = { extra = { uses = 5, chips = -10, xmult = 4 } },
 
     loc_vars = function(self, info_queue, card)
         return {
@@ -58,11 +52,7 @@ SMODS.Seal {
 	pos = { x = 1, y = 0 },
     badge_colour = HEX('EE00FF'),
     discovered = true,
-    config = {
-        extra = {
-            counts = 5
-        }
-    },
+    config = { extra = { counts = 5 } },
 
     loc_vars = function(self, info_queue, card)
         return {
