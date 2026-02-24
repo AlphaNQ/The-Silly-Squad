@@ -17,7 +17,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.joker_main and next(context.poker_hands[card.ability.extra.type]) then
             return {
-                mult = card.ability.extra.xmult
+                xmult = card.ability.extra.xmult
             }
         end
     end
