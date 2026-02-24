@@ -7,6 +7,7 @@ Requirements:
 - [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils)
 
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
+**WARNING: CONTAINS MILDLY SUGGESTIVE CONTENT. WE DO NOT HAVE A TOGGLE FOR THIS YET, SO BE ADVISED.**
 
 ## Current Content
 **13 New Jokers**:
