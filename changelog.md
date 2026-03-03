@@ -242,3 +242,11 @@ they never did anything anyway tbf.
 - Updated Joker keys for easier access and understanding.
 
 - Updated Bankroll visuals. Overtime all cards will have the same treatment.
+
+## V 0.7.1
+
+- Fixed Ferret lady only giving +4 mult instead of X4 like it's supposed to.
+
+- Fixed Burning Love Challenge where it crashed due to invalid card ID. missed that during last update's changes.
+
+- Buffed Burning Love's starting deck.

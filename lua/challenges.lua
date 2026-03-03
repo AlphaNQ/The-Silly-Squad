@@ -10,7 +10,7 @@ SMODS.Challenge{
         }
     },
     jokers = {
-        { id = "j_tss_flame", eternal = true }
+        { id = "j_tss_flame_noble", eternal = true }
     },
     restrictions = {
         banned_cards = {
@@ -39,22 +39,14 @@ SMODS.Challenge{
             { s = 'H', r = 'K' },
             { s = 'H', r = 'Q' },
             { s = 'H', r = 'J' },
-            { s = 'H', r = 'T' },
-            { s = 'H', r = '9' },
-            { s = 'H', r = '8' },
-            { s = 'H', r = '7' },
-            { s = 'H', r = '6' },
-            { s = 'H', r = '5' },
-            { s = 'H', r = '4' },
-            { s = 'H', r = '3' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
-            { s = 'H', r = '2' },
+            { s = 'H', r = 'T' }, { s = 'H', r = 'T' },
+            { s = 'H', r = '9' }, { s = 'H', r = '9' },
+            { s = 'H', r = '8' }, { s = 'H', r = '8' },
+            { s = 'H', r = '7' }, { s = 'H', r = '7' },
+            { s = 'H', r = '6' }, { s = 'H', r = '6' },
+            { s = 'H', r = '5' }, { s = 'H', r = '5' },
+            { s = 'H', r = '4' }, { s = 'H', r = '4' },
+            { s = 'H', r = '3' }, { s = 'H', r = '3' }, 
         }
     }
 }

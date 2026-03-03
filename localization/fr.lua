@@ -31,6 +31,18 @@ return {
                     "{C:red}doubler jetons nécessaire"
                 }
             },
+            j_tss_better_m = {
+                name = "The Better m",
+                text = {
+                    "Des doubles de Jokers vous",
+                    "possédez son {C:attention}2X{} plus probable",
+                    "d'apparaître dans le magasin",
+                    caption.."Just un coupons avec plus d'étapes."
+                },
+                unlock = {
+                    "ERR 404: Carte introuvable",
+                }
+            },
             j_tss_bribery = {
                 name = "Corruption",
                 text = {
@@ -131,15 +143,6 @@ return {
                     "des {C:red}fraises{} sur l'écran,",
                     "donnant divers effets.",
                     "{C:inactive}(Actuellement: Multi. {X:mult,C:white}X#1#{C:inactive})"
-                },
-                unlock = {
-                    "ERR 404: Carte introuvable",
-                }
-            },
-            j_tss_mykra = {
-                name = "The Better m",
-                text = {
-                    ""
                 },
                 unlock = {
                     "ERR 404: Carte introuvable",

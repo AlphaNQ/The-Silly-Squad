@@ -123,7 +123,7 @@ local files = {
 	"misc",
 	"strawbs",
 	"blinds",
-	"challenge",
+	"challenges",
 	--"config",					--currently commented out as its functions do not work atm. working on a fix.
 	"http"
 }
@@ -136,7 +136,7 @@ local jokers = {
 	"roulette",
 	"bankroll",
 	"ferretlady",
-	"mykra",
+	"better_m",
 	"goblintactics",
 	"hamshanks",
 	"helix",

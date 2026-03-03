@@ -31,6 +31,18 @@ return {
                     "{C:red}double required chips"
                 }
             },
+            j_tss_better_m = {
+                name = "The Better m",
+                text = {
+                    "Duplicates of Jokers you",
+                    "own are {C:attention}2X{} more likely",
+                    "to appear in the shop",
+                    caption.."Just a voucher with extra steps."
+                },
+                unlock = {
+                    "ERR 404: Card Not Found",
+                }
+            },
             j_tss_bribery = {
                 name = "Bribery",
                 text = {
@@ -129,17 +141,6 @@ return {
                     "across the screen,",
                     "giving various buffs.",
                     "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
-                },
-                unlock = {
-                    "ERR 404: Card Not Found",
-                }
-            },
-            j_tss_mykra = {
-                name = "The Better m",
-                text = {
-                    "Jokers with similar keywords",
-                    "to those you own are more likely",
-                    "to appear in the shop"
                 },
                 unlock = {
                     "ERR 404: Card Not Found",
