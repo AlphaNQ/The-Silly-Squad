@@ -250,3 +250,9 @@ they never did anything anyway tbf.
 - Fixed Burning Love Challenge where it crashed due to invalid card ID. missed that during last update's changes.
 
 - Buffed Burning Love's starting deck.
+
+## V 0.7.2
+
+- Added seal protection to Flame Noble and Heavenly Kitsune. essentially, if a card already has a seal, these jokers will not trigger for that card no matter the odds.
+
+- Fixed Burning Love restrictions to be more fair(removed The Head blind and a few jokers).

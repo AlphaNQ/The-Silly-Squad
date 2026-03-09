@@ -31,9 +31,11 @@ SMODS.Joker {
         -- Seal Application
         if context.after and context.cardarea == G.jokers then
             for k, scored_card in ipairs(context.scoring_hand) do
-                if scored_card:get_id() == 14 and SMODS.pseudorandom_probability(card, 'tss_kitsune', 1, card.ability.extra.fave_odds) then
-                    scored_card:set_seal("tss_favour")
-                    SMODS.calculate_effect( { message = localize('k_kiss'), colour = G.C.SECONDARY_SET.Planet }, card )        
+                if scored_card:get_id() == 14 and scored_card:get_seal() == nil then
+                    if SMODS.pseudorandom_probability(card, 'tss_kitsune', 1, card.ability.extra.fave_odds) then
+                        scored_card:set_seal("tss_favour")
+                        SMODS.calculate_effect( { message = localize('k_kiss'), colour = G.C.SECONDARY_SET.Planet }, card )
+                    end
                 end
             end
         end

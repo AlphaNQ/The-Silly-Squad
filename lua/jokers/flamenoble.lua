@@ -20,9 +20,11 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.after and context.cardarea == G.jokers then
             for k, scored_card in ipairs(context.scoring_hand) do
-                if SMODS.pseudorandom_probability(card, 'tss_flame', 1, card.ability.extra.burn_odds) then
-                    scored_card:set_seal("tss_burned")
-                    SMODS.calculate_effect( { message = localize('k_burn'), colour = HEX('660000') }, card )
+                if scored_card:get_seal() == nil then
+                    if SMODS.pseudorandom_probability(card, 'tss_flame', 1, card.ability.extra.burn_odds) then
+                        scored_card:set_seal("tss_burned")
+                        SMODS.calculate_effect( { message = localize('k_burn'), colour = HEX('660000') }, card )
+                    end
 	            end
             end
         end

@@ -32,12 +32,9 @@
 
 ----   NOTES   ----
 
-- Add seal protection to Flame Noble and Heavenly Kitsune.
-
 ---- BUG FIXES ----
 
-- only hearts rule does not affect the loot pool from spectral cards
-]]
+- only hearts rule does not affect the loot pool from spectral cards. ]]
 
 -- ====================META=DATA====================
 

@@ -14,6 +14,10 @@ SMODS.Challenge{
     },
     restrictions = {
         banned_cards = {
+            { id = 'j_greedy_joker' },
+            { id = 'j_wrathful_joker' },
+            { id = 'j_gluttenous_joker' },
+            { id = 'j_blackboard' },
             { id = 'j_smeared' },
             { id = 'j_rough_gem' },
             { id = 'j_arrowhead' },
@@ -30,6 +34,7 @@ SMODS.Challenge{
             { id = 'bl_club', type = 'blind' },
             { id = 'bl_goad', type = 'blind' },
             { id = 'bl_window', type = 'blind' },
+            { id = 'bl_head', type = 'blind' },
         }
     },
     deck = {
