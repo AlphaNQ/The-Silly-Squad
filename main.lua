@@ -1,11 +1,7 @@
 --[[TO DO LIST
 
-- Add Helix													[🔃]
-	- eats joker to either side of itself at random, gains 0.1 mult per joker
 - Add MYKRA (uncommon)										[🔃]
     - Jokers you own will be more likely to appear in the shop and be Negative.
-- Add Funky
-	- 1 in 20 chance to give x810 mult, else it's x0.8
 - Add Cat
 	- idk yet
 - Add Toast

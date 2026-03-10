@@ -2,9 +2,9 @@
 By Alpha N. Q.
 
 Requirements:
-- [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods)
-- [Lovely (>=0.9)](https://github.com/ethangreen-dev/lovely-injector)
-- [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils)
+- [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods/releases/latest)
+- [Lovely (>=0.9)](https://github.com/ethangreen-dev/lovely-injector/releases/latest)
+- [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils/releases/latest)
 
 The Silly Squad is a very dumb Balatro mod that i made of me, my partners, and my friends because why not!? 
 **WARNING: CONTAINS MILDLY SUGGESTIVE CONTENT. WE DO NOT HAVE A TOGGLE FOR THIS YET, SO BE ADVISED.**
